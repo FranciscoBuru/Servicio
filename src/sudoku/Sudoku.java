@@ -147,6 +147,66 @@ public class Sudoku {
         
     }
     
+    public boolean revisionInicial(){
+        
+        boolean res = true;
+        int aux;
+        
+        if(revisionNumerosValidos()){
+            
+            for(int f = 0; f<9; f++){
+                
+                for(int c = 0; c<9 ; c++){
+                
+                    if(sudoku[f][c] != 0){
+                        
+                        aux = sudoku[f][c];
+                        sudoku[f][c] = 0;
+                        
+                        if(!valida(f,c,aux)){
+                            res = false;
+                        }
+                        else
+                          sudoku[f][c] = aux;  
+                    }
+                
+                }
+            
+            }
+        
+        }
+        else{
+            res=false;
+        }
+        
+        
+     return res;   
+    }
+    
+    public boolean revisionNumerosValidos(){
+    
+        boolean res = true;
+        
+        for(int f = 0; f<9; f++){
+            
+            for(int c = 0; c<9 ; c++){
+                
+                if(sudoku[f][c]<0 || sudoku[f][c]>10){
+                    res = false;
+                }
+                
+            }
+            
+        }
+        
+        return res;
+        
+    
+        
+    }
+    
+    
+    
     
     
      public  void imprimeSudoku(){

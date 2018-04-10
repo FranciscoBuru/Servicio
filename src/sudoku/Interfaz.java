@@ -110,6 +110,7 @@ public class Interfaz extends javax.swing.JFrame {
         siete_ocho = new javax.swing.JTextField();
         resuelve = new javax.swing.JButton();
         respuestas = new javax.swing.JTextField();
+        limpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -369,6 +370,19 @@ public class Interfaz extends javax.swing.JFrame {
         });
 
         respuestas.setEditable(false);
+        respuestas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                respuestasActionPerformed(evt);
+            }
+        });
+
+        limpiar.setText("Limpiar");
+        limpiar.setActionCommand("Limpiar");
+        limpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limpiarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -431,16 +445,12 @@ public class Interfaz extends javax.swing.JFrame {
                                 .addComponent(ocho_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(ocho_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(siete_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(siete_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(siete_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(resuelve, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                            .addComponent(respuestas)))
+                                .addComponent(siete_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -562,109 +572,153 @@ public class Interfaz extends javax.swing.JFrame {
                                     .addComponent(uno_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(uno_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(resuelve, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                    .addComponent(respuestas)
+                    .addComponent(limpiar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(uno_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uno_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uno_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(269, 269, 269)
+                        .addComponent(respuestas, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)
+                        .addComponent(limpiar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(dos_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dos_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dos_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tres_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tres_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tres_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(resuelve))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(uno_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uno_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uno_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(dos_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dos_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dos_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tres_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tres_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tres_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(uno_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uno_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uno_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(dos_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dos_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dos_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tres_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tres_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tres_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cuatro_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cuatro_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cuatro_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cinco_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cinco_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cinco_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(seis_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(seis_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(seis_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cuatro_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cuatro_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cuatro_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cinco_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cinco_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cinco_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(seis_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(seis_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(seis_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cuatro_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cuatro_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cuatro_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cinco_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cinco_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cinco_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(seis_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(seis_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(seis_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(uno_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(uno_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(uno_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(dos_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(dos_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(dos_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(tres_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tres_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tres_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(uno_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(uno_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(uno_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(dos_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(dos_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(dos_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(tres_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tres_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tres_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(uno_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(uno_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(uno_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(dos_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(dos_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(dos_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(tres_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tres_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tres_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(30, 30, 30)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(cuatro_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cuatro_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cuatro_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(cinco_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cinco_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cinco_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(seis_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(seis_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(seis_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(cuatro_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cuatro_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cuatro_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(cinco_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cinco_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cinco_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(seis_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(seis_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(seis_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(cuatro_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cuatro_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cuatro_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(cinco_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cinco_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cinco_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(seis_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(seis_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(seis_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(28, 28, 28)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(siete_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(siete_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(siete_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(ocho_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(ocho_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(ocho_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(nueve_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(nueve_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(nueve_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(siete_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(siete_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(siete_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(ocho_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(ocho_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(ocho_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(nueve_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(nueve_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(nueve_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(siete_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -674,47 +728,13 @@ public class Interfaz extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(ocho_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(ocho_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ocho_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(17, 17, 17)
-                                .addComponent(respuestas, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(nueve_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nueve_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nueve_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(resuelve)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(siete_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(siete_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(siete_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ocho_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ocho_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ocho_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(nueve_cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nueve_cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nueve_seis, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(siete_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(siete_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(siete_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ocho_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ocho_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ocho_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(nueve_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nueve_dos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nueve_tres, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(25, Short.MAX_VALUE))
+                                    .addComponent(ocho_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(nueve_siete, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nueve_ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nueve_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
@@ -726,6 +746,8 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void resuelveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resuelveActionPerformed
         // TODO add your handling code here:
+       
+        
         
         String aux;
         int arre [][] = new int [9][9];
@@ -737,107 +759,528 @@ public class Interfaz extends javax.swing.JFrame {
             arre[0][0] = 0;
         }
         
+        try{
+            arre[0][1] = Integer.parseInt(uno_dos.getText());
+        }catch(Exception NumberFormatException){
+            arre[0][1] = 0;
+        }
+         
+        try{
+            arre[0][2] = Integer.parseInt(uno_tres.getText());        
+        }catch(Exception NumberFormatException){
+            arre[0][2] = 0;
+        }
+         
+        try{
+            arre[0][3] = Integer.parseInt(uno_cuatro.getText());
+        }catch(Exception NumberFormatException){
+            arre[0][3] = 0;
+        }
+         
+        try{
         
-        arre[0][1] = Integer.parseInt(uno_dos.getText());
-        arre[0][2] = Integer.parseInt(uno_tres.getText());        
-        arre[0][3] = Integer.parseInt(uno_cuatro.getText());
-        arre[0][4] = Integer.parseInt(uno_cinco.getText());
-        arre[0][5] = Integer.parseInt(uno_seis.getText());
-        arre[0][6] = Integer.parseInt(uno_siete.getText());
-        arre[0][7] = Integer.parseInt(uno_ocho.getText());
-        arre[0][8] = Integer.parseInt(uno_nueve.getText());
+            arre[0][4] = Integer.parseInt(uno_cinco.getText());
+        }catch(Exception NumberFormatException){
+            arre[0][4] = 0;
+        }
+            
+        try{
+            arre[0][5] = Integer.parseInt(uno_seis.getText());
+        }catch(Exception NumberFormatException){
+            arre[0][5] = 0;
+        }
         
-        arre[1][0] = Integer.parseInt(dos_uno.getText());
-        arre[1][1] = Integer.parseInt(dos_dos.getText());
-        arre[1][2] = Integer.parseInt(dos_tres.getText());        
-        arre[1][3] = Integer.parseInt(dos_cuatro.getText());
-        arre[1][4] = Integer.parseInt(dos_cinco.getText());
-        arre[1][5] = Integer.parseInt(dos_seis.getText());
-        arre[1][6] = Integer.parseInt(dos_siete.getText());
-        arre[1][7] = Integer.parseInt(dos_ocho.getText());
-        arre[1][8] = Integer.parseInt(dos_nueve.getText()); 
+        try{
+            arre[0][6] = Integer.parseInt(uno_siete.getText());
+        }catch(Exception NumberFormatException){
+            arre[0][6] = 0;
+        }
+            
+       try{ 
         
-        arre[2][0] = Integer.parseInt(tres_uno.getText());
-        arre[2][1] = Integer.parseInt(tres_dos.getText());
-        arre[2][2] = Integer.parseInt(tres_tres.getText());        
-        arre[2][3] = Integer.parseInt(tres_cuatro.getText());
-        arre[2][4] = Integer.parseInt(tres_cinco.getText());
-        arre[2][5] = Integer.parseInt(tres_seis.getText());
-        arre[2][6] = Integer.parseInt(tres_siete.getText());
-        arre[2][7] = Integer.parseInt(tres_ocho.getText());
-        arre[2][8] = Integer.parseInt(tres_nueve.getText()); 
+           arre[0][7] = Integer.parseInt(uno_ocho.getText());
+        }catch(Exception NumberFormatException){
+            arre[0][7] = 0;
+        }
+         
+       try{
+           arre[0][8] = Integer.parseInt(uno_nueve.getText());
+        }catch(Exception NumberFormatException){
+            arre[0][8] = 0;
+        }
+       
+       
+       //Segundo cubo
+       
+       try{
         
+           arre[1][0] = Integer.parseInt(dos_uno.getText());
+        }catch(Exception NumberFormatException){
+            arre[1][0] = 0;
+        }
+           
+       try{
+           arre[1][1] = Integer.parseInt(dos_dos.getText());
+        }catch(Exception NumberFormatException){
+            arre[1][1] = 0;
+        }
+           
+       try{
+           arre[1][2] = Integer.parseInt(dos_tres.getText());        
+        }catch(Exception NumberFormatException){
+            arre[1][2] = 0;
+        }
+           
+       try{
+           arre[1][3] = Integer.parseInt(dos_cuatro.getText());
+        }catch(Exception NumberFormatException){
+            arre[1][3] = 0;
+        }
+       
+       try{
+           arre[1][4] = Integer.parseInt(dos_cinco.getText());
+        }catch(Exception NumberFormatException){
+            arre[1][4] = 0;
+        }
+           
+       try{
+           arre[1][5] = Integer.parseInt(dos_seis.getText());
+        }catch(Exception NumberFormatException){
+            arre[1][5] = 0;
+        }
+       
+       try{
+           arre[1][6] = Integer.parseInt(dos_siete.getText());
+        }catch(Exception NumberFormatException){
+            arre[1][6] = 0;
+        }
+           
+       try{
+           arre[1][7] = Integer.parseInt(dos_ocho.getText());
+        }catch(Exception NumberFormatException){
+            arre[1][7] = 0;
+        }
+       try{    
+            arre[1][8] = Integer.parseInt(dos_nueve.getText()); 
+        }catch(Exception NumberFormatException){
+            arre[1][8] = 0;
+        }
+       
+       //Tercer cubo
+            
+        
+       try{
+            arre[2][0] = Integer.parseInt(tres_uno.getText());
+        }catch(Exception NumberFormatException){
+            arre[2][0] = 0;
+        }
+         
+       try{
+            arre[2][1] = Integer.parseInt(tres_dos.getText());
+        }catch(Exception NumberFormatException){
+            arre[2][1] = 0;
+        }
+            
+       try{
+            arre[2][2] = Integer.parseInt(tres_tres.getText());        
+        }catch(Exception NumberFormatException){
+            arre[2][2] = 0;
+        }
+            
+       try{
+            arre[2][3] = Integer.parseInt(tres_cuatro.getText());
+        }catch(Exception NumberFormatException){
+            arre[2][3] = 0;
+        }
+            
+       try{
+            arre[2][4] = Integer.parseInt(tres_cinco.getText());
+        }catch(Exception NumberFormatException){
+            arre[2][4] = 0;
+        }
+            
+       try{
+            arre[2][5] = Integer.parseInt(tres_seis.getText());
+        }catch(Exception NumberFormatException){
+            arre[2][5] = 0;
+        }
+       
+       try{
+            
+            arre[2][6] = Integer.parseInt(tres_siete.getText());
+        }catch(Exception NumberFormatException){
+            arre[2][6] = 0;
+        }
+            
+       try{
+            arre[2][7] = Integer.parseInt(tres_ocho.getText());
+        }catch(Exception NumberFormatException){
+            arre[2][7] = 0;
+        }
+       try{
+            arre[2][8] = Integer.parseInt(tres_nueve.getText()); 
+        }catch(Exception NumberFormatException){
+            arre[2][8] = 0;
+        }
         //-----------------------------------------
+        //Cuarto cubo
         
-        arre[3][0] = Integer.parseInt(cuatro_uno.getText());
-        arre[3][1] = Integer.parseInt(cuatro_dos.getText());
-        arre[3][2] = Integer.parseInt(cuatro_tres.getText());        
-        arre[3][3] = Integer.parseInt(cuatro_cuatro.getText());
-        arre[3][4] = Integer.parseInt(cuatro_cinco.getText());
-        arre[3][5] = Integer.parseInt(cuatro_seis.getText());
-        arre[3][6] = Integer.parseInt(cuatro_siete.getText());
-        arre[3][7] = Integer.parseInt(cuatro_ocho.getText());
-        arre[3][8] = Integer.parseInt(cuatro_nueve.getText());
         
-        arre[4][0] = Integer.parseInt(cinco_uno.getText());
-        arre[4][1] = Integer.parseInt(cinco_dos.getText());
-        arre[4][2] = Integer.parseInt(cinco_tres.getText());        
-        arre[4][3] = Integer.parseInt(cinco_cuatro.getText());
-        arre[4][4] = Integer.parseInt(cinco_cinco.getText());
-        arre[4][5] = Integer.parseInt(cinco_seis.getText());
-        arre[4][6] = Integer.parseInt(cinco_siete.getText());
-        arre[4][7] = Integer.parseInt(cinco_ocho.getText());
-        arre[4][8] = Integer.parseInt(cinco_nueve.getText()); 
+        try{
+            arre[3][0] = Integer.parseInt(cuatro_uno.getText());
+        }catch(Exception NumberFormatException){
+            arre[3][0] = 0;
+        }
+         
+        try{
+            arre[3][1] = Integer.parseInt(cuatro_dos.getText());
+        }catch(Exception NumberFormatException){
+            arre[3][1] = 0;
+        }
+            
+        try{
+            arre[3][2] = Integer.parseInt(cuatro_tres.getText());        
+        }catch(Exception NumberFormatException){
+            arre[3][2] = 0;
+        }
+            
+        try{
+            arre[3][3] = Integer.parseInt(cuatro_cuatro.getText());
+        }catch(Exception NumberFormatException){
+            arre[3][3] = 0;
+        }
+            
+        try{
+            arre[3][4] = Integer.parseInt(cuatro_cinco.getText());
+        }catch(Exception NumberFormatException){
+            arre[3][4] = 0;
+        }
         
-        arre[5][0] = Integer.parseInt(seis_uno.getText());
-        arre[5][1] = Integer.parseInt(seis_dos.getText());
-        arre[5][2] = Integer.parseInt(seis_tres.getText());        
-        arre[5][3] = Integer.parseInt(seis_cuatro.getText());
-        arre[5][4] = Integer.parseInt(seis_cinco.getText());
-        arre[5][5] = Integer.parseInt(seis_seis.getText());
-        arre[5][6] = Integer.parseInt(seis_siete.getText());
-        arre[5][7] = Integer.parseInt(seis_ocho.getText());
-        arre[5][8] = Integer.parseInt(seis_nueve.getText()); 
+        try{
+            arre[3][5] = Integer.parseInt(cuatro_seis.getText());
+        }catch(Exception NumberFormatException){
+            arre[3][5] = 0;
+        }
+            
+        try{
+            arre[3][6] = Integer.parseInt(cuatro_siete.getText());
+        }catch(Exception NumberFormatException){
+            arre[3][6] = 0;
+        }
+            
+        try{
+            arre[3][7] = Integer.parseInt(cuatro_ocho.getText());
+        }catch(Exception NumberFormatException){
+            arre[3][7] = 0;
+        }
+            
+        try{
+            arre[3][8] = Integer.parseInt(cuatro_nueve.getText());
+        }catch(Exception NumberFormatException){
+            arre[3][8] = 0;
+        }
+            
+        //Quinto cubo 
+        
+        
+        
+        try{    
+            arre[4][0] = Integer.parseInt(cinco_uno.getText());
+            }catch(Exception NumberFormatException){
+            arre[4][0] = 0;
+        }
+        
+        try{
+            arre[4][1] = Integer.parseInt(cinco_dos.getText());
+            }catch(Exception NumberFormatException){
+            arre[4][1] = 0;
+        }
+        
+        try{
+            arre[4][2] = Integer.parseInt(cinco_tres.getText());        
+            }catch(Exception NumberFormatException){
+            arre[4][2] = 0;
+        }
+        
+        try{
+            arre[4][3] = Integer.parseInt(cinco_cuatro.getText());
+            }catch(Exception NumberFormatException){
+            arre[4][3] = 0;
+        }
+        
+        try{
+            arre[4][4] = Integer.parseInt(cinco_cinco.getText());
+            }catch(Exception NumberFormatException){
+            arre[4][4] = 0;
+        }
+            
+        
+        try{
+            arre[4][5] = Integer.parseInt(cinco_seis.getText());
+            }catch(Exception NumberFormatException){
+            arre[4][5] = 0;
+        }
+        
+        try{
+            arre[4][6] = Integer.parseInt(cinco_siete.getText());
+            }catch(Exception NumberFormatException){
+            arre[4][6] = 0;
+        }
+        
+        try{
+            arre[4][7] = Integer.parseInt(cinco_ocho.getText());
+            }catch(Exception NumberFormatException){
+            arre[4][7] = 0;
+        }
+        
+        try{
+            arre[4][8] = Integer.parseInt(cinco_nueve.getText()); 
+        }catch(Exception NumberFormatException){
+            arre[4][8] = 0;
+        }
+        
+        //Sexto cuadro
+        
+        
+        try{
+            arre[5][0] = Integer.parseInt(seis_uno.getText());
+            }catch(Exception NumberFormatException){
+            arre[5][0] = 0;
+        }
+        
+        try{
+            arre[5][1] = Integer.parseInt(seis_dos.getText());
+            }catch(Exception NumberFormatException){
+            arre[5][1] = 0;
+        }
+        
+        try{
+            arre[5][2] = Integer.parseInt(seis_tres.getText());        
+            }catch(Exception NumberFormatException){
+            arre[5][2] = 0;
+        }
+        
+        try{
+            arre[5][3] = Integer.parseInt(seis_cuatro.getText());
+        }catch(Exception NumberFormatException){
+            arre[5][3] = 0;
+        }
+        
+        try{
+            arre[5][4] = Integer.parseInt(seis_cinco.getText());
+            }catch(Exception NumberFormatException){
+            arre[5][4] = 0;
+        }
+        
+        try{
+            arre[5][5] = Integer.parseInt(seis_seis.getText());
+        }catch(Exception NumberFormatException){
+            arre[5][5] = 0;
+        }
+        
+        try{
+            arre[5][6] = Integer.parseInt(seis_siete.getText());
+        }catch(Exception NumberFormatException){
+            arre[5][6] = 0;
+        }
+        
+        try{
+            arre[5][7] = Integer.parseInt(seis_ocho.getText());
+        }catch(Exception NumberFormatException){
+            arre[5][7] = 0;
+        }
+        
+        try{
+            arre[5][8] = Integer.parseInt(seis_nueve.getText()); 
+            }catch(Exception NumberFormatException){
+            arre[5][8] = 0;
+        }
+        
         
         //--------------------------------------------
+        //Septimo cuadro
         
-        arre[6][0] = Integer.parseInt(siete_uno.getText());
-        arre[6][1] = Integer.parseInt(siete_dos.getText());
-        arre[6][2] = Integer.parseInt(siete_tres.getText());        
-        arre[6][3] = Integer.parseInt(siete_cuatro.getText());
-        arre[6][4] = Integer.parseInt(siete_cinco.getText());
-        arre[6][5] = Integer.parseInt(siete_seis.getText());
-        arre[6][6] = Integer.parseInt(siete_siete.getText());
-        arre[6][7] = Integer.parseInt(siete_ocho.getText());
-        arre[6][8] = Integer.parseInt(siete_nueve.getText());
+        try{
+            arre[6][0] = Integer.parseInt(siete_uno.getText());
+        }catch(Exception NumberFormatException){
+            arre[6][0] = 0;
+        }
         
-        arre[7][0] = Integer.parseInt(ocho_uno.getText());
-        arre[7][1] = Integer.parseInt(ocho_dos.getText());
-        arre[7][2] = Integer.parseInt(ocho_tres.getText());        
-        arre[7][3] = Integer.parseInt(ocho_cuatro.getText());
-        arre[7][4] = Integer.parseInt(ocho_cinco.getText());
-        arre[7][5] = Integer.parseInt(ocho_seis.getText());
-        arre[7][6] = Integer.parseInt(ocho_siete.getText());
-        arre[7][7] = Integer.parseInt(ocho_ocho.getText());
-        arre[7][8] = Integer.parseInt(ocho_nueve.getText()); 
+        try{
+            arre[6][1] = Integer.parseInt(siete_dos.getText());
+        }catch(Exception NumberFormatException){
+            arre[6][1] = 0;
+        }
         
-        arre[8][0] = Integer.parseInt(nueve_uno.getText());
-        arre[8][1] = Integer.parseInt(nueve_dos.getText());
-        arre[8][2] = Integer.parseInt(nueve_tres.getText());        
-        arre[8][3] = Integer.parseInt(nueve_cuatro.getText());
-        arre[8][4] = Integer.parseInt(nueve_cinco.getText());
-        arre[8][5] = Integer.parseInt(nueve_seis.getText());
-        arre[8][6] = Integer.parseInt(nueve_siete.getText());
-        arre[8][7] = Integer.parseInt(nueve_ocho.getText());
-        arre[8][8] = Integer.parseInt(nueve_nueve.getText()); 
+        try{
+            arre[6][2] = Integer.parseInt(siete_tres.getText());        
+        }catch(Exception NumberFormatException){
+            arre[6][2] = 0;
+        }
         
+        try{
+            arre[6][3] = Integer.parseInt(siete_cuatro.getText());
+        }catch(Exception NumberFormatException){
+            arre[6][3] = 0;
+        }
+        
+        try{
+            arre[6][4] = Integer.parseInt(siete_cinco.getText());
+        }catch(Exception NumberFormatException){
+            arre[6][4] = 0;
+        }
+        
+        try{
+            arre[6][5] = Integer.parseInt(siete_seis.getText());
+        }catch(Exception NumberFormatException){
+            arre[6][5] = 0;
+        }
+        
+        try{
+            arre[6][6] = Integer.parseInt(siete_siete.getText());
+        }catch(Exception NumberFormatException){
+            arre[6][6] = 0;
+        }
+        
+        try{
+            arre[6][7] = Integer.parseInt(siete_ocho.getText());
+        }catch(Exception NumberFormatException){
+            arre[6][7] = 0;
+        }
+        
+        try{
+            arre[6][8] = Integer.parseInt(siete_nueve.getText());
+        }catch(Exception NumberFormatException){
+            arre[6][8] = 0;
+        }
+        
+        
+        //Octavo cuadro    
+            
+        try{
+            arre[7][0] = Integer.parseInt(ocho_uno.getText());
+            }catch(Exception NumberFormatException){
+            arre[7][0] = 0;
+        }
+        
+        try{
+            arre[7][1] = Integer.parseInt(ocho_dos.getText());
+        }catch(Exception NumberFormatException){
+            arre[7][1] = 0;
+        }
+        
+        try{
+            arre[7][2] = Integer.parseInt(ocho_tres.getText());        
+        }catch(Exception NumberFormatException){
+            arre[7][2] = 0;
+        }
+        
+        try{
+            arre[7][3] = Integer.parseInt(ocho_cuatro.getText());
+        }catch(Exception NumberFormatException){
+            arre[7][3] = 0;
+        }
+        
+        try{
+            arre[7][4] = Integer.parseInt(ocho_cinco.getText());
+        }catch(Exception NumberFormatException){
+            arre[7][4] = 0;
+        }
+        
+        try{
+            arre[7][5] = Integer.parseInt(ocho_seis.getText());
+        }catch(Exception NumberFormatException){
+            arre[7][5] = 0;
+        }
+        
+        try{
+            arre[7][6] = Integer.parseInt(ocho_siete.getText());
+        }catch(Exception NumberFormatException){
+            arre[7][6] = 0;
+        }
+        
+        try{
+            arre[7][7] = Integer.parseInt(ocho_ocho.getText());
+        }catch(Exception NumberFormatException){
+            arre[7][7] = 0;
+        }
+        
+        try{
+            arre[7][8] = Integer.parseInt(ocho_nueve.getText()); 
+        }catch(Exception NumberFormatException){
+            arre[7][8] = 0;
+        }
+            
+        //Noveno cuadro
+        
+        
+        try{
+            arre[8][0] = Integer.parseInt(nueve_uno.getText());
+        }catch(Exception NumberFormatException){
+            arre[8][0] = 0;
+        }
+        
+        try{
+            arre[8][1] = Integer.parseInt(nueve_dos.getText());
+        }catch(Exception NumberFormatException){
+            arre[8][1] = 0;
+        }
+        
+        try{
+            arre[8][2] = Integer.parseInt(nueve_tres.getText());        
+        }catch(Exception NumberFormatException){
+            arre[8][2] = 0;
+        }
+        
+        try{
+            arre[8][3] = Integer.parseInt(nueve_cuatro.getText());
+        }catch(Exception NumberFormatException){
+            arre[8][3] = 0;
+        }
+        
+        try{
+            arre[8][4] = Integer.parseInt(nueve_cinco.getText());
+        }catch(Exception NumberFormatException){
+            arre[8][4] = 0;
+        }
+        
+        try{
+            arre[8][5] = Integer.parseInt(nueve_seis.getText());
+        }catch(Exception NumberFormatException){
+            arre[8][5] = 0;
+        }
+        
+        try{
+            arre[8][6] = Integer.parseInt(nueve_siete.getText());
+        }catch(Exception NumberFormatException){
+            arre[8][6] = 0;
+        }
+        
+        try{
+            arre[8][7] = Integer.parseInt(nueve_ocho.getText());
+        }catch(Exception NumberFormatException){
+            arre[8][7] = 0;
+        }
+        
+        try{
+            arre[8][8] = Integer.parseInt(nueve_nueve.getText()); 
+        }catch(Exception NumberFormatException){
+            arre[8][8] = 0;
+        }
+        
+            
+            
         Sudoku s1 = new Sudoku(arre);
         
       
         
         int arre2[][] = new int [9][9];
         
-        respuestas.setText(s1.resuelve()+"");
+        if(s1.revisionInicial()){
+        
+       
+        
+        if(s1.resuelve()){
         
         arre2 = s1.regresaSudoku();
         
@@ -935,8 +1378,122 @@ public class Interfaz extends javax.swing.JFrame {
         nueve_siete.setText(arre2[8][6]+"");
         nueve_ocho.setText(arre2[8][7]+"");
         nueve_nueve.setText(arre2[8][8]+"");
+            
+            respuestas.setText("Resuelto!");
         
+            }
+        else
+            respuestas.setText("Error, no tiene solución");
+        }
+        else
+            respuestas.setText("Error, numeros inválidos");
     }//GEN-LAST:event_resuelveActionPerformed
+
+    private void respuestasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_respuestasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_respuestasActionPerformed
+
+    private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
+        // TODO add your handling code here:
+        
+        
+        uno_uno.setText("");
+        uno_dos.setText("");
+        uno_tres.setText("");
+        uno_cuatro.setText("");
+        uno_cinco.setText("");
+        uno_seis.setText("");
+        uno_siete.setText("");
+        uno_ocho.setText("");
+        uno_nueve.setText("");
+        
+        dos_uno.setText("");
+        dos_dos.setText("");
+        dos_tres.setText("");
+        dos_cuatro.setText("");
+        dos_cinco.setText("");
+        dos_seis.setText("");
+        dos_siete.setText("");
+        dos_ocho.setText("");
+        dos_nueve.setText("");
+        
+        tres_uno.setText("");
+        tres_dos.setText("");
+        tres_tres.setText("");
+        tres_cuatro.setText("");
+        tres_cinco.setText("");
+        tres_seis.setText("");
+        tres_siete.setText("");
+        tres_ocho.setText("");
+        tres_nueve.setText("");
+        
+        //----------------------------------------------
+        
+        cuatro_uno.setText("");
+        cuatro_dos.setText("");
+        cuatro_tres.setText("");
+        cuatro_cuatro.setText("");
+        cuatro_cinco.setText("");
+        cuatro_seis.setText("");
+        cuatro_siete.setText("");
+        cuatro_ocho.setText("");
+        cuatro_nueve.setText("");
+        
+        cinco_uno.setText("");
+        cinco_dos.setText("");
+        cinco_tres.setText("");
+        cinco_cuatro.setText("");
+        cinco_cinco.setText("");
+        cinco_seis.setText("");
+        cinco_siete.setText("");
+        cinco_ocho.setText("");
+        cinco_nueve.setText("");
+        
+        seis_uno.setText("");
+        seis_dos.setText("");
+        seis_tres.setText("");
+        seis_cuatro.setText("");
+        seis_cinco.setText("");
+        seis_seis.setText("");
+        seis_siete.setText("");
+        seis_ocho.setText("");
+        seis_nueve.setText("");
+        
+        //-------------------------------------
+        
+        siete_uno.setText("");
+        siete_dos.setText("");
+        siete_tres.setText("");
+        siete_cuatro.setText("");
+        siete_cinco.setText("");
+        siete_seis.setText("");
+        siete_siete.setText("");
+        siete_ocho.setText("");
+        siete_nueve.setText("");
+        
+        ocho_uno.setText("");
+        ocho_dos.setText("");
+        ocho_tres.setText("");
+        ocho_cuatro.setText("");
+        ocho_cinco.setText("");
+        ocho_seis.setText("");
+        ocho_siete.setText("");
+        ocho_ocho.setText("");
+        ocho_nueve.setText("");
+        
+        nueve_uno.setText("");
+        nueve_dos.setText("");
+        nueve_tres.setText("");
+        nueve_cuatro.setText("");
+        nueve_cinco.setText("");
+        nueve_seis.setText("");
+        nueve_siete.setText("");
+        nueve_ocho.setText("");
+        nueve_nueve.setText("");   
+        
+        
+        
+    }//GEN-LAST:event_limpiarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1001,6 +1558,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JTextField dos_siete;
     private javax.swing.JTextField dos_tres;
     private javax.swing.JTextField dos_uno;
+    private javax.swing.JButton limpiar;
     private javax.swing.JTextField nueve_cinco;
     private javax.swing.JTextField nueve_cuatro;
     private javax.swing.JTextField nueve_dos;

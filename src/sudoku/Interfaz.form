@@ -26,7 +26,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="nueve_uno" min="-2" pref="38" max="-2" attributes="0"/>
@@ -90,7 +90,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="ocho_nueve" min="-2" pref="38" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Component id="siete_siete" min="-2" pref="38" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="siete_ocho" min="-2" pref="38" max="-2" attributes="0"/>
@@ -98,14 +98,9 @@
                               <Component id="siete_nueve" min="-2" pref="38" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="resuelve" pref="100" max="32767" attributes="0"/>
-                          <Component id="respuestas" max="32767" attributes="0"/>
-                      </Group>
                   </Group>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="seis_uno" min="-2" pref="38" max="-2" attributes="0"/>
@@ -178,23 +173,23 @@
                               </Group>
                           </Group>
                       </Group>
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="tres_uno" min="-2" pref="38" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="tres_dos" min="-2" pref="38" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="tres_tres" min="-2" pref="38" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="dos_uno" min="-2" pref="38" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="dos_dos" min="-2" pref="38" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="dos_tres" min="-2" pref="38" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="uno_uno" min="-2" pref="38" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="uno_dos" min="-2" pref="38" max="-2" attributes="0"/>
@@ -253,138 +248,194 @@
                       </Group>
                   </Group>
               </Group>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="resuelve" pref="99" max="32767" attributes="0"/>
+                  <Component id="respuestas" max="32767" attributes="0"/>
+                  <Component id="limpiar" max="32767" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="uno_siete" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="uno_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="uno_nueve" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="269" max="-2" attributes="0"/>
+                      <Component id="respuestas" min="-2" pref="52" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                      <Component id="limpiar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="dos_siete" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="dos_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="dos_nueve" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="tres_siete" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="tres_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="tres_nueve" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="resuelve" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="uno_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="uno_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="uno_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="dos_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="dos_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="dos_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="tres_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="tres_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="tres_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="uno_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="uno_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="uno_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="dos_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="dos_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="dos_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="tres_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="tres_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="tres_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="cuatro_siete" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="cuatro_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="cuatro_nueve" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="cinco_siete" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="cinco_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="cinco_nueve" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="seis_siete" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="seis_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="seis_nueve" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="cuatro_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="cuatro_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="cuatro_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="cinco_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="cinco_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="cinco_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="seis_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="seis_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="seis_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="cuatro_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="cuatro_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="cuatro_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="cinco_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="cinco_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="cinco_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="seis_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="seis_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="seis_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="uno_siete" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="uno_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="uno_nueve" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="dos_siete" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="dos_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="dos_nueve" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="tres_siete" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="tres_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="tres_nueve" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="uno_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="uno_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="uno_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="dos_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="dos_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="dos_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="tres_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="tres_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="tres_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="uno_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="uno_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="uno_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="dos_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="dos_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="dos_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="tres_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="tres_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="tres_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="cuatro_siete" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="cuatro_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="cuatro_nueve" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="cinco_siete" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="cinco_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="cinco_nueve" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="seis_siete" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="seis_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="seis_nueve" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="cuatro_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="cuatro_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="cuatro_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="cinco_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="cinco_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="cinco_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="seis_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="seis_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="seis_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="cuatro_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="cuatro_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="cuatro_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="cinco_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="cinco_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="cinco_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="seis_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="seis_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="seis_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="siete_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="siete_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="siete_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="ocho_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="ocho_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="ocho_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="nueve_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="nueve_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="nueve_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="siete_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="siete_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="siete_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="ocho_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="ocho_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="ocho_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="nueve_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="nueve_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="nueve_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="siete_siete" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                   <Component id="siete_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
@@ -396,60 +447,17 @@
                                   <Component id="ocho_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                   <Component id="ocho_nueve" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="nueve_siete" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                  <Component id="nueve_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                  <Component id="nueve_nueve" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                              <Component id="respuestas" min="-2" pref="52" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="nueve_siete" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="nueve_ocho" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="nueve_nueve" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="resuelve" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="siete_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="siete_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="siete_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ocho_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="ocho_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="ocho_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="nueve_cuatro" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="nueve_cinco" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="nueve_seis" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="siete_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="siete_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="siete_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ocho_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="ocho_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="ocho_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="nueve_uno" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="nueve_dos" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                          <Component id="nueve_tres" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="25" max="32767" attributes="0"/>
+              <EmptySpace pref="19" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -1118,6 +1126,18 @@
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="respuestasActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="limpiar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Limpiar"/>
+        <Property name="actionCommand" type="java.lang.String" value="Limpiar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="limpiarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
