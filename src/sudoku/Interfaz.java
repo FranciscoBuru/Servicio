@@ -747,646 +747,679 @@ public class Interfaz extends javax.swing.JFrame {
     private void resuelveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resuelveActionPerformed
         // TODO add your handling code here:
        
-        
-        
-        String aux;
-        int arre [][] = new int [9][9];
-        
-        try{
-            arre[0][0] = Integer.parseInt(uno_uno.getText());
-            
-        }catch(Exception NumberFormatException){
-            arre[0][0] = 0;
-        }
-        
-        try{
-            arre[0][1] = Integer.parseInt(uno_dos.getText());
-        }catch(Exception NumberFormatException){
-            arre[0][1] = 0;
-        }
-         
-        try{
-            arre[0][2] = Integer.parseInt(uno_tres.getText());        
-        }catch(Exception NumberFormatException){
-            arre[0][2] = 0;
-        }
-         
-        try{
-            arre[0][3] = Integer.parseInt(uno_cuatro.getText());
-        }catch(Exception NumberFormatException){
-            arre[0][3] = 0;
-        }
-         
         try{
         
-            arre[0][4] = Integer.parseInt(uno_cinco.getText());
-        }catch(Exception NumberFormatException){
-            arre[0][4] = 0;
-        }
-            
-        try{
-            arre[0][5] = Integer.parseInt(uno_seis.getText());
-        }catch(Exception NumberFormatException){
-            arre[0][5] = 0;
-        }
-        
-        try{
-            arre[0][6] = Integer.parseInt(uno_siete.getText());
-        }catch(Exception NumberFormatException){
-            arre[0][6] = 0;
-        }
-            
-       try{ 
-        
-           arre[0][7] = Integer.parseInt(uno_ocho.getText());
-        }catch(Exception NumberFormatException){
-            arre[0][7] = 0;
-        }
-         
-       try{
-           arre[0][8] = Integer.parseInt(uno_nueve.getText());
-        }catch(Exception NumberFormatException){
-            arre[0][8] = 0;
-        }
-       
-       
-       //Segundo cubo
-       
-       try{
-        
-           arre[1][0] = Integer.parseInt(dos_uno.getText());
-        }catch(Exception NumberFormatException){
-            arre[1][0] = 0;
-        }
-           
-       try{
-           arre[1][1] = Integer.parseInt(dos_dos.getText());
-        }catch(Exception NumberFormatException){
-            arre[1][1] = 0;
-        }
-           
-       try{
-           arre[1][2] = Integer.parseInt(dos_tres.getText());        
-        }catch(Exception NumberFormatException){
-            arre[1][2] = 0;
-        }
-           
-       try{
-           arre[1][3] = Integer.parseInt(dos_cuatro.getText());
-        }catch(Exception NumberFormatException){
-            arre[1][3] = 0;
-        }
-       
-       try{
-           arre[1][4] = Integer.parseInt(dos_cinco.getText());
-        }catch(Exception NumberFormatException){
-            arre[1][4] = 0;
-        }
-           
-       try{
-           arre[1][5] = Integer.parseInt(dos_seis.getText());
-        }catch(Exception NumberFormatException){
-            arre[1][5] = 0;
-        }
-       
-       try{
-           arre[1][6] = Integer.parseInt(dos_siete.getText());
-        }catch(Exception NumberFormatException){
-            arre[1][6] = 0;
-        }
-           
-       try{
-           arre[1][7] = Integer.parseInt(dos_ocho.getText());
-        }catch(Exception NumberFormatException){
-            arre[1][7] = 0;
-        }
-       try{    
-            arre[1][8] = Integer.parseInt(dos_nueve.getText()); 
-        }catch(Exception NumberFormatException){
-            arre[1][8] = 0;
-        }
-       
-       //Tercer cubo
-            
-        
-       try{
-            arre[2][0] = Integer.parseInt(tres_uno.getText());
-        }catch(Exception NumberFormatException){
-            arre[2][0] = 0;
-        }
-         
-       try{
-            arre[2][1] = Integer.parseInt(tres_dos.getText());
-        }catch(Exception NumberFormatException){
-            arre[2][1] = 0;
-        }
-            
-       try{
-            arre[2][2] = Integer.parseInt(tres_tres.getText());        
-        }catch(Exception NumberFormatException){
-            arre[2][2] = 0;
-        }
-            
-       try{
-            arre[2][3] = Integer.parseInt(tres_cuatro.getText());
-        }catch(Exception NumberFormatException){
-            arre[2][3] = 0;
-        }
-            
-       try{
-            arre[2][4] = Integer.parseInt(tres_cinco.getText());
-        }catch(Exception NumberFormatException){
-            arre[2][4] = 0;
-        }
-            
-       try{
-            arre[2][5] = Integer.parseInt(tres_seis.getText());
-        }catch(Exception NumberFormatException){
-            arre[2][5] = 0;
-        }
-       
-       try{
-            
-            arre[2][6] = Integer.parseInt(tres_siete.getText());
-        }catch(Exception NumberFormatException){
-            arre[2][6] = 0;
-        }
-            
-       try{
-            arre[2][7] = Integer.parseInt(tres_ocho.getText());
-        }catch(Exception NumberFormatException){
-            arre[2][7] = 0;
-        }
-       try{
-            arre[2][8] = Integer.parseInt(tres_nueve.getText()); 
-        }catch(Exception NumberFormatException){
-            arre[2][8] = 0;
-        }
-        //-----------------------------------------
-        //Cuarto cubo
-        
-        
-        try{
-            arre[3][0] = Integer.parseInt(cuatro_uno.getText());
-        }catch(Exception NumberFormatException){
-            arre[3][0] = 0;
-        }
-         
-        try{
-            arre[3][1] = Integer.parseInt(cuatro_dos.getText());
-        }catch(Exception NumberFormatException){
-            arre[3][1] = 0;
-        }
-            
-        try{
-            arre[3][2] = Integer.parseInt(cuatro_tres.getText());        
-        }catch(Exception NumberFormatException){
-            arre[3][2] = 0;
-        }
-            
-        try{
-            arre[3][3] = Integer.parseInt(cuatro_cuatro.getText());
-        }catch(Exception NumberFormatException){
-            arre[3][3] = 0;
-        }
-            
-        try{
-            arre[3][4] = Integer.parseInt(cuatro_cinco.getText());
-        }catch(Exception NumberFormatException){
-            arre[3][4] = 0;
-        }
-        
-        try{
-            arre[3][5] = Integer.parseInt(cuatro_seis.getText());
-        }catch(Exception NumberFormatException){
-            arre[3][5] = 0;
-        }
-            
-        try{
-            arre[3][6] = Integer.parseInt(cuatro_siete.getText());
-        }catch(Exception NumberFormatException){
-            arre[3][6] = 0;
-        }
-            
-        try{
-            arre[3][7] = Integer.parseInt(cuatro_ocho.getText());
-        }catch(Exception NumberFormatException){
-            arre[3][7] = 0;
-        }
-            
-        try{
-            arre[3][8] = Integer.parseInt(cuatro_nueve.getText());
-        }catch(Exception NumberFormatException){
-            arre[3][8] = 0;
-        }
-            
-        //Quinto cubo 
-        
-        
-        
-        try{    
-            arre[4][0] = Integer.parseInt(cinco_uno.getText());
-            }catch(Exception NumberFormatException){
-            arre[4][0] = 0;
-        }
-        
-        try{
-            arre[4][1] = Integer.parseInt(cinco_dos.getText());
-            }catch(Exception NumberFormatException){
-            arre[4][1] = 0;
-        }
-        
-        try{
-            arre[4][2] = Integer.parseInt(cinco_tres.getText());        
-            }catch(Exception NumberFormatException){
-            arre[4][2] = 0;
-        }
-        
-        try{
-            arre[4][3] = Integer.parseInt(cinco_cuatro.getText());
-            }catch(Exception NumberFormatException){
-            arre[4][3] = 0;
-        }
-        
-        try{
-            arre[4][4] = Integer.parseInt(cinco_cinco.getText());
-            }catch(Exception NumberFormatException){
-            arre[4][4] = 0;
-        }
-            
-        
-        try{
-            arre[4][5] = Integer.parseInt(cinco_seis.getText());
-            }catch(Exception NumberFormatException){
-            arre[4][5] = 0;
-        }
-        
-        try{
-            arre[4][6] = Integer.parseInt(cinco_siete.getText());
-            }catch(Exception NumberFormatException){
-            arre[4][6] = 0;
-        }
-        
-        try{
-            arre[4][7] = Integer.parseInt(cinco_ocho.getText());
-            }catch(Exception NumberFormatException){
-            arre[4][7] = 0;
-        }
-        
-        try{
-            arre[4][8] = Integer.parseInt(cinco_nueve.getText()); 
-        }catch(Exception NumberFormatException){
-            arre[4][8] = 0;
-        }
-        
-        //Sexto cuadro
-        
-        
-        try{
-            arre[5][0] = Integer.parseInt(seis_uno.getText());
-            }catch(Exception NumberFormatException){
-            arre[5][0] = 0;
-        }
-        
-        try{
-            arre[5][1] = Integer.parseInt(seis_dos.getText());
-            }catch(Exception NumberFormatException){
-            arre[5][1] = 0;
-        }
-        
-        try{
-            arre[5][2] = Integer.parseInt(seis_tres.getText());        
-            }catch(Exception NumberFormatException){
-            arre[5][2] = 0;
-        }
-        
-        try{
-            arre[5][3] = Integer.parseInt(seis_cuatro.getText());
-        }catch(Exception NumberFormatException){
-            arre[5][3] = 0;
-        }
-        
-        try{
-            arre[5][4] = Integer.parseInt(seis_cinco.getText());
-            }catch(Exception NumberFormatException){
-            arre[5][4] = 0;
-        }
-        
-        try{
-            arre[5][5] = Integer.parseInt(seis_seis.getText());
-        }catch(Exception NumberFormatException){
-            arre[5][5] = 0;
-        }
-        
-        try{
-            arre[5][6] = Integer.parseInt(seis_siete.getText());
-        }catch(Exception NumberFormatException){
-            arre[5][6] = 0;
-        }
-        
-        try{
-            arre[5][7] = Integer.parseInt(seis_ocho.getText());
-        }catch(Exception NumberFormatException){
-            arre[5][7] = 0;
-        }
-        
-        try{
-            arre[5][8] = Integer.parseInt(seis_nueve.getText()); 
-            }catch(Exception NumberFormatException){
-            arre[5][8] = 0;
-        }
-        
-        
-        //--------------------------------------------
-        //Septimo cuadro
-        
-        try{
-            arre[6][0] = Integer.parseInt(siete_uno.getText());
-        }catch(Exception NumberFormatException){
-            arre[6][0] = 0;
-        }
-        
-        try{
-            arre[6][1] = Integer.parseInt(siete_dos.getText());
-        }catch(Exception NumberFormatException){
-            arre[6][1] = 0;
-        }
-        
-        try{
-            arre[6][2] = Integer.parseInt(siete_tres.getText());        
-        }catch(Exception NumberFormatException){
-            arre[6][2] = 0;
-        }
-        
-        try{
-            arre[6][3] = Integer.parseInt(siete_cuatro.getText());
-        }catch(Exception NumberFormatException){
-            arre[6][3] = 0;
-        }
-        
-        try{
-            arre[6][4] = Integer.parseInt(siete_cinco.getText());
-        }catch(Exception NumberFormatException){
-            arre[6][4] = 0;
-        }
-        
-        try{
-            arre[6][5] = Integer.parseInt(siete_seis.getText());
-        }catch(Exception NumberFormatException){
-            arre[6][5] = 0;
-        }
-        
-        try{
-            arre[6][6] = Integer.parseInt(siete_siete.getText());
-        }catch(Exception NumberFormatException){
-            arre[6][6] = 0;
-        }
-        
-        try{
-            arre[6][7] = Integer.parseInt(siete_ocho.getText());
-        }catch(Exception NumberFormatException){
-            arre[6][7] = 0;
-        }
-        
-        try{
-            arre[6][8] = Integer.parseInt(siete_nueve.getText());
-        }catch(Exception NumberFormatException){
-            arre[6][8] = 0;
-        }
-        
-        
-        //Octavo cuadro    
-            
-        try{
-            arre[7][0] = Integer.parseInt(ocho_uno.getText());
-            }catch(Exception NumberFormatException){
-            arre[7][0] = 0;
-        }
-        
-        try{
-            arre[7][1] = Integer.parseInt(ocho_dos.getText());
-        }catch(Exception NumberFormatException){
-            arre[7][1] = 0;
-        }
-        
-        try{
-            arre[7][2] = Integer.parseInt(ocho_tres.getText());        
-        }catch(Exception NumberFormatException){
-            arre[7][2] = 0;
-        }
-        
-        try{
-            arre[7][3] = Integer.parseInt(ocho_cuatro.getText());
-        }catch(Exception NumberFormatException){
-            arre[7][3] = 0;
-        }
-        
-        try{
-            arre[7][4] = Integer.parseInt(ocho_cinco.getText());
-        }catch(Exception NumberFormatException){
-            arre[7][4] = 0;
-        }
-        
-        try{
-            arre[7][5] = Integer.parseInt(ocho_seis.getText());
-        }catch(Exception NumberFormatException){
-            arre[7][5] = 0;
-        }
-        
-        try{
-            arre[7][6] = Integer.parseInt(ocho_siete.getText());
-        }catch(Exception NumberFormatException){
-            arre[7][6] = 0;
-        }
-        
-        try{
-            arre[7][7] = Integer.parseInt(ocho_ocho.getText());
-        }catch(Exception NumberFormatException){
-            arre[7][7] = 0;
-        }
-        
-        try{
-            arre[7][8] = Integer.parseInt(ocho_nueve.getText()); 
-        }catch(Exception NumberFormatException){
-            arre[7][8] = 0;
-        }
-            
-        //Noveno cuadro
-        
-        
-        try{
-            arre[8][0] = Integer.parseInt(nueve_uno.getText());
-        }catch(Exception NumberFormatException){
-            arre[8][0] = 0;
-        }
-        
-        try{
-            arre[8][1] = Integer.parseInt(nueve_dos.getText());
-        }catch(Exception NumberFormatException){
-            arre[8][1] = 0;
-        }
-        
-        try{
-            arre[8][2] = Integer.parseInt(nueve_tres.getText());        
-        }catch(Exception NumberFormatException){
-            arre[8][2] = 0;
-        }
-        
-        try{
-            arre[8][3] = Integer.parseInt(nueve_cuatro.getText());
-        }catch(Exception NumberFormatException){
-            arre[8][3] = 0;
-        }
-        
-        try{
-            arre[8][4] = Integer.parseInt(nueve_cinco.getText());
-        }catch(Exception NumberFormatException){
-            arre[8][4] = 0;
-        }
-        
-        try{
-            arre[8][5] = Integer.parseInt(nueve_seis.getText());
-        }catch(Exception NumberFormatException){
-            arre[8][5] = 0;
-        }
-        
-        try{
-            arre[8][6] = Integer.parseInt(nueve_siete.getText());
-        }catch(Exception NumberFormatException){
-            arre[8][6] = 0;
-        }
-        
-        try{
-            arre[8][7] = Integer.parseInt(nueve_ocho.getText());
-        }catch(Exception NumberFormatException){
-            arre[8][7] = 0;
-        }
-        
-        try{
-            arre[8][8] = Integer.parseInt(nueve_nueve.getText()); 
-        }catch(Exception NumberFormatException){
-            arre[8][8] = 0;
-        }
-        
-            
-            
-        Sudoku s1 = new Sudoku(arre);
-        
-      
-        
-        int arre2[][] = new int [9][9];
-        
-        if(s1.revisionInicial()){
-        
-       
-        
-        if(s1.resuelve()){
-        
-        arre2 = s1.regresaSudoku();
-        
-       
-        uno_uno.setText(arre2[0][0]+"");
-        uno_dos.setText(arre2[0][1]+"");
-        uno_tres.setText(arre2[0][2]+"");
-        uno_cuatro.setText(arre2[0][3]+"");
-        uno_cinco.setText(arre2[0][4]+"");
-        uno_seis.setText(arre2[0][5]+"");
-        uno_siete.setText(arre2[0][6]+"");
-        uno_ocho.setText(arre2[0][7]+"");
-        uno_nueve.setText(arre2[0][8]+"");
-        
-        dos_uno.setText(arre2[1][0]+"");
-        dos_dos.setText(arre2[1][1]+"");
-        dos_tres.setText(arre2[1][2]+"");
-        dos_cuatro.setText(arre2[1][3]+"");
-        dos_cinco.setText(arre2[1][4]+"");
-        dos_seis.setText(arre2[1][5]+"");
-        dos_siete.setText(arre2[1][6]+"");
-        dos_ocho.setText(arre2[1][7]+"");
-        dos_nueve.setText(arre2[1][8]+"");
-        
-        tres_uno.setText(arre2[2][0]+"");
-        tres_dos.setText(arre2[2][1]+"");
-        tres_tres.setText(arre2[2][2]+"");
-        tres_cuatro.setText(arre2[2][3]+"");
-        tres_cinco.setText(arre2[2][4]+"");
-        tres_seis.setText(arre2[2][5]+"");
-        tres_siete.setText(arre2[2][6]+"");
-        tres_ocho.setText(arre2[2][7]+"");
-        tres_nueve.setText(arre2[2][8]+"");
-        
-        //----------------------------------------------
-        
-        cuatro_uno.setText(arre2[3][0]+"");
-        cuatro_dos.setText(arre2[3][1]+"");
-        cuatro_tres.setText(arre2[3][2]+"");
-        cuatro_cuatro.setText(arre2[3][3]+"");
-        cuatro_cinco.setText(arre2[3][4]+"");
-        cuatro_seis.setText(arre2[3][5]+"");
-        cuatro_siete.setText(arre2[3][6]+"");
-        cuatro_ocho.setText(arre2[3][7]+"");
-        cuatro_nueve.setText(arre2[3][8]+"");
-        
-        cinco_uno.setText(arre2[4][0]+"");
-        cinco_dos.setText(arre2[4][1]+"");
-        cinco_tres.setText(arre2[4][2]+"");
-        cinco_cuatro.setText(arre2[4][3]+"");
-        cinco_cinco.setText(arre2[4][4]+"");
-        cinco_seis.setText(arre2[4][5]+"");
-        cinco_siete.setText(arre2[4][6]+"");
-        cinco_ocho.setText(arre2[4][7]+"");
-        cinco_nueve.setText(arre2[4][8]+"");
-        
-        seis_uno.setText(arre2[5][0]+"");
-        seis_dos.setText(arre2[5][1]+"");
-        seis_tres.setText(arre2[5][2]+"");
-        seis_cuatro.setText(arre2[5][3]+"");
-        seis_cinco.setText(arre2[5][4]+"");
-        seis_seis.setText(arre2[5][5]+"");
-        seis_siete.setText(arre2[5][6]+"");
-        seis_ocho.setText(arre2[5][7]+"");
-        seis_nueve.setText(arre2[5][8]+"");
-        
-        //-------------------------------------
-        
-        siete_uno.setText(arre2[6][0]+"");
-        siete_dos.setText(arre2[6][1]+"");
-        siete_tres.setText(arre2[6][2]+"");
-        siete_cuatro.setText(arre2[6][3]+"");
-        siete_cinco.setText(arre2[6][4]+"");
-        siete_seis.setText(arre2[6][5]+"");
-        siete_siete.setText(arre2[6][6]+"");
-        siete_ocho.setText(arre2[6][7]+"");
-        siete_nueve.setText(arre2[6][8]+"");
-        
-        ocho_uno.setText(arre2[7][0]+"");
-        ocho_dos.setText(arre2[7][1]+"");
-        ocho_tres.setText(arre2[7][2]+"");
-        ocho_cuatro.setText(arre2[7][3]+"");
-        ocho_cinco.setText(arre2[7][4]+"");
-        ocho_seis.setText(arre2[7][5]+"");
-        ocho_siete.setText(arre2[7][6]+"");
-        ocho_ocho.setText(arre2[7][7]+"");
-        ocho_nueve.setText(arre2[7][8]+"");
-        
-        nueve_uno.setText(arre2[8][0]+"");
-        nueve_dos.setText(arre2[8][1]+"");
-        nueve_tres.setText(arre2[8][2]+"");
-        nueve_cuatro.setText(arre2[8][3]+"");
-        nueve_cinco.setText(arre2[8][4]+"");
-        nueve_seis.setText(arre2[8][5]+"");
-        nueve_siete.setText(arre2[8][6]+"");
-        nueve_ocho.setText(arre2[8][7]+"");
-        nueve_nueve.setText(arre2[8][8]+"");
-            
-            respuestas.setText("Resuelto!");
-        
+            String aux;
+            int arre [][] = new int [9][9];
+
+            try{
+                arre[0][0] = Integer.parseInt(uno_uno.getText());
+
             }
-        else
-            respuestas.setText("Error, no tiene solución");
+            catch(NumberFormatException e){
+
+                if(!uno_uno.getText().equals("")) {
+
+                    throw new NullPointerException();
+
+                } else {
+                    arre[0][0] = 0;
+                }
+            }
+
+
+            try{
+                arre[0][1] = Integer.parseInt(uno_dos.getText());
+            }
+            catch(NumberFormatException e){
+                 if(!uno_dos.getText().equals("")) {
+
+                    throw new NullPointerException();
+
+                } else {
+                    arre[0][1] = 0;
+                }
+            }
+
+            //  Faltan los Else en el cacth de los demás, ahuas con nom de casilla y arre[x][y]
+            
+            
+            try{
+                arre[0][2] = Integer.parseInt(uno_tres.getText());        
+            }
+            catch(NumberFormatException e){
+                arre[0][2] = 0;
+            }
+
+
+            try{
+                arre[0][3] = Integer.parseInt(uno_cuatro.getText());
+            }
+            catch(NumberFormatException e){
+                arre[0][3] = 0;
+            }
+
+
+            try{
+                arre[0][4] = Integer.parseInt(uno_cinco.getText());
+            }
+            catch(NumberFormatException e){
+                arre[0][4] = 0;
+            }
+
+
+            try{
+                arre[0][5] = Integer.parseInt(uno_seis.getText());
+            }
+            catch(NumberFormatException e){
+                arre[0][5] = 0;
+            }
+
+
+            try{
+                arre[0][6] = Integer.parseInt(uno_siete.getText());
+            }
+            catch(NumberFormatException e){
+                arre[0][6] = 0;
+            }
+
+            try{ 
+               arre[0][7] = Integer.parseInt(uno_ocho.getText());
+            }
+            catch(NumberFormatException e){
+                arre[0][7] = 0;
+            }
+
+            try{
+               arre[0][8] = Integer.parseInt(uno_nueve.getText());
+            }
+            catch(NumberFormatException e){
+                arre[0][8] = 0;
+            }
+
+
+           //Segundo cubo
+
+           try{
+
+               arre[1][0] = Integer.parseInt(dos_uno.getText());
+            }catch(NumberFormatException e){
+                arre[1][0] = 0;
+            }
+
+           try{
+               arre[1][1] = Integer.parseInt(dos_dos.getText());
+            }catch(NumberFormatException e){
+                arre[1][1] = 0;
+            }
+
+           try{
+               arre[1][2] = Integer.parseInt(dos_tres.getText());        
+            }catch(NumberFormatException e){
+                arre[1][2] = 0;
+            }
+
+           try{
+               arre[1][3] = Integer.parseInt(dos_cuatro.getText());
+            }catch(NumberFormatException e){
+                arre[1][3] = 0;
+            }
+
+           try{
+               arre[1][4] = Integer.parseInt(dos_cinco.getText());
+            }catch(NumberFormatException e){
+                arre[1][4] = 0;
+            }
+
+           try{
+               arre[1][5] = Integer.parseInt(dos_seis.getText());
+            }catch(NumberFormatException e){
+                arre[1][5] = 0;
+            }
+
+           try{
+               arre[1][6] = Integer.parseInt(dos_siete.getText());
+            }catch(NumberFormatException e){
+                arre[1][6] = 0;
+            }
+
+           try{
+               arre[1][7] = Integer.parseInt(dos_ocho.getText());
+            }catch(NumberFormatException e){
+                arre[1][7] = 0;
+            }
+           try{    
+                arre[1][8] = Integer.parseInt(dos_nueve.getText()); 
+            }catch(NumberFormatException e){
+                arre[1][8] = 0;
+            }
+
+           //Tercer cubo
+
+
+           try{
+                arre[2][0] = Integer.parseInt(tres_uno.getText());
+            }catch(NumberFormatException e){
+                arre[2][0] = 0;
+            }
+
+           try{
+                arre[2][1] = Integer.parseInt(tres_dos.getText());
+            }catch(NumberFormatException e){
+                arre[2][1] = 0;
+            }
+
+           try{
+                arre[2][2] = Integer.parseInt(tres_tres.getText());        
+            }catch(NumberFormatException e){
+                arre[2][2] = 0;
+            }
+
+           try{
+                arre[2][3] = Integer.parseInt(tres_cuatro.getText());
+            }catch(NumberFormatException e){
+                arre[2][3] = 0;
+            }
+
+           try{
+                arre[2][4] = Integer.parseInt(tres_cinco.getText());
+            }catch(NumberFormatException e){
+                arre[2][4] = 0;
+            }
+
+           try{
+                arre[2][5] = Integer.parseInt(tres_seis.getText());
+            }catch(NumberFormatException e){
+                arre[2][5] = 0;
+            }
+
+           try{
+
+                arre[2][6] = Integer.parseInt(tres_siete.getText());
+            }catch(NumberFormatException e){
+                arre[2][6] = 0;
+            }
+
+           try{
+                arre[2][7] = Integer.parseInt(tres_ocho.getText());
+            }catch(NumberFormatException e){
+                arre[2][7] = 0;
+            }
+           try{
+                arre[2][8] = Integer.parseInt(tres_nueve.getText()); 
+            }catch(NumberFormatException e){
+                arre[2][8] = 0;
+            }
+            //-----------------------------------------
+            //Cuarto cubo
+
+
+            try{
+                arre[3][0] = Integer.parseInt(cuatro_uno.getText());
+            }catch(NumberFormatException e){
+                arre[3][0] = 0;
+            }
+
+            try{
+                arre[3][1] = Integer.parseInt(cuatro_dos.getText());
+            }catch(NumberFormatException e){
+                arre[3][1] = 0;
+            }
+
+            try{
+                arre[3][2] = Integer.parseInt(cuatro_tres.getText());        
+            }catch(NumberFormatException e){
+                arre[3][2] = 0;
+            }
+
+            try{
+                arre[3][3] = Integer.parseInt(cuatro_cuatro.getText());
+            }catch(NumberFormatException e){
+                arre[3][3] = 0;
+            }
+
+            try{
+                arre[3][4] = Integer.parseInt(cuatro_cinco.getText());
+            }catch(NumberFormatException e){
+                arre[3][4] = 0;
+            }
+
+            try{
+                arre[3][5] = Integer.parseInt(cuatro_seis.getText());
+            }catch(NumberFormatException e){
+                arre[3][5] = 0;
+            }
+
+            try{
+                arre[3][6] = Integer.parseInt(cuatro_siete.getText());
+            }catch(NumberFormatException e){
+                arre[3][6] = 0;
+            }
+
+            try{
+                arre[3][7] = Integer.parseInt(cuatro_ocho.getText());
+            }catch(NumberFormatException e){
+                arre[3][7] = 0;
+            }
+
+            try{
+                arre[3][8] = Integer.parseInt(cuatro_nueve.getText());
+            }catch(NumberFormatException e){
+                arre[3][8] = 0;
+            }
+
+            //Quinto cubo 
+
+
+
+            try{    
+                arre[4][0] = Integer.parseInt(cinco_uno.getText());
+                }catch(NumberFormatException e){
+                arre[4][0] = 0;
+            }
+
+            try{
+                arre[4][1] = Integer.parseInt(cinco_dos.getText());
+                }catch(NumberFormatException e){
+                arre[4][1] = 0;
+            }
+
+            try{
+                arre[4][2] = Integer.parseInt(cinco_tres.getText());        
+                }catch(NumberFormatException e){
+                arre[4][2] = 0;
+            }
+
+            try{
+                arre[4][3] = Integer.parseInt(cinco_cuatro.getText());
+                }catch(NumberFormatException e){
+                arre[4][3] = 0;
+            }
+
+            try{
+                arre[4][4] = Integer.parseInt(cinco_cinco.getText());
+                }catch(NumberFormatException e){
+                arre[4][4] = 0;
+            }
+
+
+            try{
+                arre[4][5] = Integer.parseInt(cinco_seis.getText());
+                }catch(NumberFormatException e){
+                arre[4][5] = 0;
+            }
+
+            try{
+                arre[4][6] = Integer.parseInt(cinco_siete.getText());
+                }catch(NumberFormatException e){
+                arre[4][6] = 0;
+            }
+
+            try{
+                arre[4][7] = Integer.parseInt(cinco_ocho.getText());
+                }catch(NumberFormatException e){
+                arre[4][7] = 0;
+            }
+
+            try{
+                arre[4][8] = Integer.parseInt(cinco_nueve.getText()); 
+            }catch(NumberFormatException e){
+                arre[4][8] = 0;
+            }
+
+            //Sexto cuadro
+
+
+            try{
+                arre[5][0] = Integer.parseInt(seis_uno.getText());
+                }catch(NumberFormatException e){
+                arre[5][0] = 0;
+            }
+
+            try{
+                arre[5][1] = Integer.parseInt(seis_dos.getText());
+                }catch(NumberFormatException e){
+                arre[5][1] = 0;
+            }
+
+            try{
+                arre[5][2] = Integer.parseInt(seis_tres.getText());        
+                }catch(NumberFormatException e){
+                arre[5][2] = 0;
+            }
+
+            try{
+                arre[5][3] = Integer.parseInt(seis_cuatro.getText());
+            }catch(NumberFormatException e){
+                arre[5][3] = 0;
+            }
+
+            try{
+                arre[5][4] = Integer.parseInt(seis_cinco.getText());
+                }catch(NumberFormatException e){
+                arre[5][4] = 0;
+            }
+
+            try{
+                arre[5][5] = Integer.parseInt(seis_seis.getText());
+            }catch(NumberFormatException e){
+                arre[5][5] = 0;
+            }
+
+            try{
+                arre[5][6] = Integer.parseInt(seis_siete.getText());
+            }catch(NumberFormatException e){
+                arre[5][6] = 0;
+            }
+
+            try{
+                arre[5][7] = Integer.parseInt(seis_ocho.getText());
+            }catch(NumberFormatException e){
+                arre[5][7] = 0;
+            }
+
+            try{
+                arre[5][8] = Integer.parseInt(seis_nueve.getText()); 
+                }catch(NumberFormatException e){
+                arre[5][8] = 0;
+            }
+
+
+            //--------------------------------------------
+            //Septimo cuadro
+
+            try{
+                arre[6][0] = Integer.parseInt(siete_uno.getText());
+            }catch(NumberFormatException e){
+                arre[6][0] = 0;
+            }
+
+            try{
+                arre[6][1] = Integer.parseInt(siete_dos.getText());
+            }catch(NumberFormatException e){
+                arre[6][1] = 0;
+            }
+
+            try{
+                arre[6][2] = Integer.parseInt(siete_tres.getText());        
+            }catch(NumberFormatException e){
+                arre[6][2] = 0;
+            }
+
+            try{
+                arre[6][3] = Integer.parseInt(siete_cuatro.getText());
+            }catch(NumberFormatException e){
+                arre[6][3] = 0;
+            }
+
+            try{
+                arre[6][4] = Integer.parseInt(siete_cinco.getText());
+            }catch(NumberFormatException e){
+                arre[6][4] = 0;
+            }
+
+            try{
+                arre[6][5] = Integer.parseInt(siete_seis.getText());
+            }catch(NumberFormatException e){
+                arre[6][5] = 0;
+            }
+
+            try{
+                arre[6][6] = Integer.parseInt(siete_siete.getText());
+            }catch(NumberFormatException e){
+                arre[6][6] = 0;
+            }
+
+            try{
+                arre[6][7] = Integer.parseInt(siete_ocho.getText());
+            }catch(NumberFormatException e){
+                arre[6][7] = 0;
+            }
+
+            try{
+                arre[6][8] = Integer.parseInt(siete_nueve.getText());
+            }catch(NumberFormatException e){
+                arre[6][8] = 0;
+            }
+
+
+            //Octavo cuadro    
+
+            try{
+                arre[7][0] = Integer.parseInt(ocho_uno.getText());
+                }catch(NumberFormatException e){
+                arre[7][0] = 0;
+            }
+
+            try{
+                arre[7][1] = Integer.parseInt(ocho_dos.getText());
+            }catch(NumberFormatException e){
+                arre[7][1] = 0;
+            }
+
+            try{
+                arre[7][2] = Integer.parseInt(ocho_tres.getText());        
+            }catch(NumberFormatException e){
+                arre[7][2] = 0;
+            }
+
+            try{
+                arre[7][3] = Integer.parseInt(ocho_cuatro.getText());
+            }catch(NumberFormatException e){
+                arre[7][3] = 0;
+            }
+
+            try{
+                arre[7][4] = Integer.parseInt(ocho_cinco.getText());
+            }catch(NumberFormatException e){
+                arre[7][4] = 0;
+            }
+
+            try{
+                arre[7][5] = Integer.parseInt(ocho_seis.getText());
+            }catch(NumberFormatException e){
+                arre[7][5] = 0;
+            }
+
+            try{
+                arre[7][6] = Integer.parseInt(ocho_siete.getText());
+            }catch(NumberFormatException e){
+                arre[7][6] = 0;
+            }
+
+            try{
+                arre[7][7] = Integer.parseInt(ocho_ocho.getText());
+            }catch(NumberFormatException e){
+                arre[7][7] = 0;
+            }
+
+            try{
+                arre[7][8] = Integer.parseInt(ocho_nueve.getText()); 
+            }catch(NumberFormatException e){
+                arre[7][8] = 0;
+            }
+
+            //Noveno cuadro
+
+
+            try{
+                arre[8][0] = Integer.parseInt(nueve_uno.getText());
+            }catch(NumberFormatException e){
+                arre[8][0] = 0;
+            }
+
+            try{
+                arre[8][1] = Integer.parseInt(nueve_dos.getText());
+            }catch(NumberFormatException e){
+                arre[8][1] = 0;
+            }
+
+            try{
+                arre[8][2] = Integer.parseInt(nueve_tres.getText());        
+            }catch(NumberFormatException e){
+                arre[8][2] = 0;
+            }
+
+            try{
+                arre[8][3] = Integer.parseInt(nueve_cuatro.getText());
+            }catch(NumberFormatException e){
+                arre[8][3] = 0;
+            }
+
+            try{
+                arre[8][4] = Integer.parseInt(nueve_cinco.getText());
+            }catch(NumberFormatException e){
+                arre[8][4] = 0;
+            }
+
+            try{
+                arre[8][5] = Integer.parseInt(nueve_seis.getText());
+            }catch(NumberFormatException e){
+                arre[8][5] = 0;
+            }
+
+            try{
+                arre[8][6] = Integer.parseInt(nueve_siete.getText());
+            }catch(NumberFormatException e){
+                arre[8][6] = 0;
+            }
+
+            try{
+                arre[8][7] = Integer.parseInt(nueve_ocho.getText());
+            }catch(NumberFormatException e){
+                arre[8][7] = 0;
+            }
+
+            try{
+                arre[8][8] = Integer.parseInt(nueve_nueve.getText()); 
+            }catch(NumberFormatException e){
+                arre[8][8] = 0;
+            }
+
+
+
+            Sudoku s1 = new Sudoku(arre);
+
+
+
+            int arre2[][] = new int [9][9];
+
+            if(s1.revisionInicial()){
+
+
+
+                if(s1.resuelve()){
+
+                    arre2 = s1.regresaSudoku();
+
+
+                    uno_uno.setText(arre2[0][0]+"");
+                    uno_dos.setText(arre2[0][1]+"");
+                    uno_tres.setText(arre2[0][2]+"");
+                    uno_cuatro.setText(arre2[0][3]+"");
+                    uno_cinco.setText(arre2[0][4]+"");
+                    uno_seis.setText(arre2[0][5]+"");
+                    uno_siete.setText(arre2[0][6]+"");
+                    uno_ocho.setText(arre2[0][7]+"");
+                    uno_nueve.setText(arre2[0][8]+"");
+
+                    dos_uno.setText(arre2[1][0]+"");
+                    dos_dos.setText(arre2[1][1]+"");
+                    dos_tres.setText(arre2[1][2]+"");
+                    dos_cuatro.setText(arre2[1][3]+"");
+                    dos_cinco.setText(arre2[1][4]+"");
+                    dos_seis.setText(arre2[1][5]+"");
+                    dos_siete.setText(arre2[1][6]+"");
+                    dos_ocho.setText(arre2[1][7]+"");
+                    dos_nueve.setText(arre2[1][8]+"");
+
+                    tres_uno.setText(arre2[2][0]+"");
+                    tres_dos.setText(arre2[2][1]+"");
+                    tres_tres.setText(arre2[2][2]+"");
+                    tres_cuatro.setText(arre2[2][3]+"");
+                    tres_cinco.setText(arre2[2][4]+"");
+                    tres_seis.setText(arre2[2][5]+"");
+                    tres_siete.setText(arre2[2][6]+"");
+                    tres_ocho.setText(arre2[2][7]+"");
+                    tres_nueve.setText(arre2[2][8]+"");
+
+                    //----------------------------------------------
+
+                    cuatro_uno.setText(arre2[3][0]+"");
+                    cuatro_dos.setText(arre2[3][1]+"");
+                    cuatro_tres.setText(arre2[3][2]+"");
+                    cuatro_cuatro.setText(arre2[3][3]+"");
+                    cuatro_cinco.setText(arre2[3][4]+"");
+                    cuatro_seis.setText(arre2[3][5]+"");
+                    cuatro_siete.setText(arre2[3][6]+"");
+                    cuatro_ocho.setText(arre2[3][7]+"");
+                    cuatro_nueve.setText(arre2[3][8]+"");
+
+                    cinco_uno.setText(arre2[4][0]+"");
+                    cinco_dos.setText(arre2[4][1]+"");
+                    cinco_tres.setText(arre2[4][2]+"");
+                    cinco_cuatro.setText(arre2[4][3]+"");
+                    cinco_cinco.setText(arre2[4][4]+"");
+                    cinco_seis.setText(arre2[4][5]+"");
+                    cinco_siete.setText(arre2[4][6]+"");
+                    cinco_ocho.setText(arre2[4][7]+"");
+                    cinco_nueve.setText(arre2[4][8]+"");
+
+                    seis_uno.setText(arre2[5][0]+"");
+                    seis_dos.setText(arre2[5][1]+"");
+                    seis_tres.setText(arre2[5][2]+"");
+                    seis_cuatro.setText(arre2[5][3]+"");
+                    seis_cinco.setText(arre2[5][4]+"");
+                    seis_seis.setText(arre2[5][5]+"");
+                    seis_siete.setText(arre2[5][6]+"");
+                    seis_ocho.setText(arre2[5][7]+"");
+                    seis_nueve.setText(arre2[5][8]+"");
+
+                    //-------------------------------------
+
+                    siete_uno.setText(arre2[6][0]+"");
+                    siete_dos.setText(arre2[6][1]+"");
+                    siete_tres.setText(arre2[6][2]+"");
+                    siete_cuatro.setText(arre2[6][3]+"");
+                    siete_cinco.setText(arre2[6][4]+"");
+                    siete_seis.setText(arre2[6][5]+"");
+                    siete_siete.setText(arre2[6][6]+"");
+                    siete_ocho.setText(arre2[6][7]+"");
+                    siete_nueve.setText(arre2[6][8]+"");
+
+                    ocho_uno.setText(arre2[7][0]+"");
+                    ocho_dos.setText(arre2[7][1]+"");
+                    ocho_tres.setText(arre2[7][2]+"");
+                    ocho_cuatro.setText(arre2[7][3]+"");
+                    ocho_cinco.setText(arre2[7][4]+"");
+                    ocho_seis.setText(arre2[7][5]+"");
+                    ocho_siete.setText(arre2[7][6]+"");
+                    ocho_ocho.setText(arre2[7][7]+"");
+                    ocho_nueve.setText(arre2[7][8]+"");
+
+                    nueve_uno.setText(arre2[8][0]+"");
+                    nueve_dos.setText(arre2[8][1]+"");
+                    nueve_tres.setText(arre2[8][2]+"");
+                    nueve_cuatro.setText(arre2[8][3]+"");
+                    nueve_cinco.setText(arre2[8][4]+"");
+                    nueve_seis.setText(arre2[8][5]+"");
+                    nueve_siete.setText(arre2[8][6]+"");
+                    nueve_ocho.setText(arre2[8][7]+"");
+                    nueve_nueve.setText(arre2[8][8]+"");
+
+                    respuestas.setText("Resuelto!");
+
+                }
+                else
+                    respuestas.setText("Error, no tiene solución");
+            }
+            else
+                respuestas.setText("Error, numeros inválidos");
+
+            }
+        catch(NullPointerException e){
+            respuestas.setText("Error, símbolos inválidos");
         }
-        else
-            respuestas.setText("Error, numeros inválidos");
     }//GEN-LAST:event_resuelveActionPerformed
 
     private void respuestasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_respuestasActionPerformed
