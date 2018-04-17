@@ -760,7 +760,7 @@ public class Interfaz extends javax.swing.JFrame {
 
                 if(!uno_uno.getText().equals("")) {
 
-                    throw new NullPointerException();
+                    throw new CharacterNotValidException();
 
                 } else {
                     arre[0][0] = 0;
@@ -772,23 +772,29 @@ public class Interfaz extends javax.swing.JFrame {
                 arre[0][1] = Integer.parseInt(uno_dos.getText());
             }
             catch(NumberFormatException e){
-                 if(!uno_dos.getText().equals("")) {
+                if(!uno_dos.getText().equals("")) {
 
-                    throw new NullPointerException();
+                    throw new CharacterNotValidException();
 
                 } else {
                     arre[0][1] = 0;
                 }
             }
 
-            //  Faltan los Else en el cacth de los demás, ahuas con nom de casilla y arre[x][y]
+            
             
             
             try{
                 arre[0][2] = Integer.parseInt(uno_tres.getText());        
             }
             catch(NumberFormatException e){
-                arre[0][2] = 0;
+                if(!uno_tres.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[0][2] = 0;
+                }
             }
 
 
@@ -796,7 +802,13 @@ public class Interfaz extends javax.swing.JFrame {
                 arre[0][3] = Integer.parseInt(uno_cuatro.getText());
             }
             catch(NumberFormatException e){
-                arre[0][3] = 0;
+                if(!uno_cuatro.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[0][3] = 0;
+                }
             }
 
 
@@ -804,7 +816,13 @@ public class Interfaz extends javax.swing.JFrame {
                 arre[0][4] = Integer.parseInt(uno_cinco.getText());
             }
             catch(NumberFormatException e){
-                arre[0][4] = 0;
+                if(!uno_cinco.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[0][4] = 0;
+                }
             }
 
 
@@ -812,7 +830,13 @@ public class Interfaz extends javax.swing.JFrame {
                 arre[0][5] = Integer.parseInt(uno_seis.getText());
             }
             catch(NumberFormatException e){
-                arre[0][5] = 0;
+                if(!uno_seis.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[0][5] = 0;
+                }
             }
 
 
@@ -820,21 +844,41 @@ public class Interfaz extends javax.swing.JFrame {
                 arre[0][6] = Integer.parseInt(uno_siete.getText());
             }
             catch(NumberFormatException e){
-                arre[0][6] = 0;
+                if(!uno_siete.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[0][6] = 0;
+                }
             }
 
+            
+            
             try{ 
                arre[0][7] = Integer.parseInt(uno_ocho.getText());
             }
             catch(NumberFormatException e){
-                arre[0][7] = 0;
+                if(!uno_ocho.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[0][7] = 0;
+                }
             }
 
             try{
                arre[0][8] = Integer.parseInt(uno_nueve.getText());
             }
             catch(NumberFormatException e){
-                arre[0][8] = 0;
+                if(!uno_nueve.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[0][8] = 0;
+                }
             }
 
 
@@ -844,54 +888,108 @@ public class Interfaz extends javax.swing.JFrame {
 
                arre[1][0] = Integer.parseInt(dos_uno.getText());
             }catch(NumberFormatException e){
-                arre[1][0] = 0;
+                if(!dos_uno.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[1][0] = 0;
+                }
             }
 
            try{
                arre[1][1] = Integer.parseInt(dos_dos.getText());
             }catch(NumberFormatException e){
-                arre[1][1] = 0;
+                if(!dos_dos.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[1][1] = 0;
+                }
             }
 
            try{
                arre[1][2] = Integer.parseInt(dos_tres.getText());        
             }catch(NumberFormatException e){
-                arre[1][2] = 0;
+                if(!dos_tres.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[1][2] = 0;
+                }
             }
 
            try{
                arre[1][3] = Integer.parseInt(dos_cuatro.getText());
             }catch(NumberFormatException e){
-                arre[1][3] = 0;
+                if(!dos_cuatro.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[1][3] = 0;
+                }
             }
 
            try{
                arre[1][4] = Integer.parseInt(dos_cinco.getText());
             }catch(NumberFormatException e){
-                arre[1][4] = 0;
+                if(!dos_cinco.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[1][4] = 0;
+                }
             }
 
            try{
                arre[1][5] = Integer.parseInt(dos_seis.getText());
             }catch(NumberFormatException e){
-                arre[1][5] = 0;
+                if(!dos_seis.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[1][5] = 0;
+                }
             }
 
            try{
                arre[1][6] = Integer.parseInt(dos_siete.getText());
             }catch(NumberFormatException e){
-                arre[1][6] = 0;
+                if(!dos_siete.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[1][6] = 0;
+                }
             }
 
            try{
                arre[1][7] = Integer.parseInt(dos_ocho.getText());
             }catch(NumberFormatException e){
-                arre[1][7] = 0;
+                if(!dos_ocho.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[1][7] = 0;
+                }
             }
            try{    
                 arre[1][8] = Integer.parseInt(dos_nueve.getText()); 
             }catch(NumberFormatException e){
-                arre[1][8] = 0;
+                if(!dos_nueve.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[1][8] = 0;
+                }
             }
 
            //Tercer cubo
@@ -900,55 +998,109 @@ public class Interfaz extends javax.swing.JFrame {
            try{
                 arre[2][0] = Integer.parseInt(tres_uno.getText());
             }catch(NumberFormatException e){
-                arre[2][0] = 0;
+                if(!tres_uno.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[2][0] = 0;
+                }
             }
 
            try{
                 arre[2][1] = Integer.parseInt(tres_dos.getText());
             }catch(NumberFormatException e){
-                arre[2][1] = 0;
+                if(!tres_dos.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[2][1] = 0;
+                }
             }
 
            try{
                 arre[2][2] = Integer.parseInt(tres_tres.getText());        
             }catch(NumberFormatException e){
-                arre[2][2] = 0;
+                if(!tres_tres.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[2][2] = 0;
+                }
             }
 
            try{
                 arre[2][3] = Integer.parseInt(tres_cuatro.getText());
             }catch(NumberFormatException e){
-                arre[2][3] = 0;
+                if(!tres_cuatro.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[2][3] = 0;
+                }
             }
 
            try{
                 arre[2][4] = Integer.parseInt(tres_cinco.getText());
             }catch(NumberFormatException e){
-                arre[2][4] = 0;
+                if(!tres_cinco.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[2][4] = 0;
+                }
             }
 
            try{
                 arre[2][5] = Integer.parseInt(tres_seis.getText());
             }catch(NumberFormatException e){
-                arre[2][5] = 0;
+                if(!tres_seis.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[2][5] = 0;
+                }
             }
 
            try{
 
                 arre[2][6] = Integer.parseInt(tres_siete.getText());
             }catch(NumberFormatException e){
-                arre[2][6] = 0;
+                if(!tres_siete.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[2][6] = 0;
+                }
             }
 
            try{
                 arre[2][7] = Integer.parseInt(tres_ocho.getText());
             }catch(NumberFormatException e){
-                arre[2][7] = 0;
+                if(!tres_ocho.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[2][7] = 0;
+                }
             }
            try{
                 arre[2][8] = Integer.parseInt(tres_nueve.getText()); 
             }catch(NumberFormatException e){
-                arre[2][8] = 0;
+                if(!tres_nueve.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[2][8] = 0;
+                }
             }
             //-----------------------------------------
             //Cuarto cubo
@@ -957,55 +1109,109 @@ public class Interfaz extends javax.swing.JFrame {
             try{
                 arre[3][0] = Integer.parseInt(cuatro_uno.getText());
             }catch(NumberFormatException e){
-                arre[3][0] = 0;
+                if(!cuatro_uno.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[3][0] = 0;
+                }
             }
 
             try{
                 arre[3][1] = Integer.parseInt(cuatro_dos.getText());
             }catch(NumberFormatException e){
-                arre[3][1] = 0;
+                if(!cuatro_dos.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[3][1] = 0;
+                }
             }
 
             try{
                 arre[3][2] = Integer.parseInt(cuatro_tres.getText());        
             }catch(NumberFormatException e){
-                arre[3][2] = 0;
+                if(!cuatro_tres.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[3][2] = 0;
+                }
             }
 
             try{
                 arre[3][3] = Integer.parseInt(cuatro_cuatro.getText());
             }catch(NumberFormatException e){
-                arre[3][3] = 0;
+                if(!cuatro_cuatro.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[3][3] = 0;
+                }
             }
 
             try{
                 arre[3][4] = Integer.parseInt(cuatro_cinco.getText());
             }catch(NumberFormatException e){
-                arre[3][4] = 0;
+                if(!cuatro_cinco.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[3][4] = 0;
+                }
             }
 
             try{
                 arre[3][5] = Integer.parseInt(cuatro_seis.getText());
             }catch(NumberFormatException e){
-                arre[3][5] = 0;
+                if(!cuatro_seis.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[3][5] = 0;
+                }
             }
 
             try{
                 arre[3][6] = Integer.parseInt(cuatro_siete.getText());
             }catch(NumberFormatException e){
-                arre[3][6] = 0;
+                if(!cuatro_siete.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[3][6] = 0;
+                }
             }
 
             try{
                 arre[3][7] = Integer.parseInt(cuatro_ocho.getText());
             }catch(NumberFormatException e){
-                arre[3][7] = 0;
+                if(!cuatro_ocho.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[3][7] = 0;
+                }
             }
 
             try{
                 arre[3][8] = Integer.parseInt(cuatro_nueve.getText());
             }catch(NumberFormatException e){
-                arre[3][8] = 0;
+                if(!cuatro_nueve.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[3][8] = 0;
+                }
             }
 
             //Quinto cubo 
@@ -1015,56 +1221,110 @@ public class Interfaz extends javax.swing.JFrame {
             try{    
                 arre[4][0] = Integer.parseInt(cinco_uno.getText());
                 }catch(NumberFormatException e){
-                arre[4][0] = 0;
+                if(!cinco_uno.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[4][0] = 0;
+                }
             }
 
             try{
                 arre[4][1] = Integer.parseInt(cinco_dos.getText());
                 }catch(NumberFormatException e){
-                arre[4][1] = 0;
+                if(!cinco_dos.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[4][1] = 0;
+                }
             }
 
             try{
                 arre[4][2] = Integer.parseInt(cinco_tres.getText());        
                 }catch(NumberFormatException e){
-                arre[4][2] = 0;
+                if(!cinco_tres.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[4][2] = 0;
+                }
             }
 
             try{
                 arre[4][3] = Integer.parseInt(cinco_cuatro.getText());
                 }catch(NumberFormatException e){
-                arre[4][3] = 0;
+                if(!cinco_cuatro.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[4][3] = 0;
+                }
             }
 
             try{
                 arre[4][4] = Integer.parseInt(cinco_cinco.getText());
                 }catch(NumberFormatException e){
-                arre[4][4] = 0;
+                if(!cinco_cinco.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[4][4] = 0;
+                }
             }
 
 
             try{
                 arre[4][5] = Integer.parseInt(cinco_seis.getText());
                 }catch(NumberFormatException e){
-                arre[4][5] = 0;
+                if(!cinco_seis.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[4][5] = 0;
+                }
             }
 
             try{
                 arre[4][6] = Integer.parseInt(cinco_siete.getText());
                 }catch(NumberFormatException e){
-                arre[4][6] = 0;
+                if(!cinco_siete.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[4][6] = 0;
+                }
             }
 
             try{
                 arre[4][7] = Integer.parseInt(cinco_ocho.getText());
                 }catch(NumberFormatException e){
-                arre[4][7] = 0;
+                if(!cinco_ocho.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[4][7] = 0;
+                }
             }
 
             try{
                 arre[4][8] = Integer.parseInt(cinco_nueve.getText()); 
             }catch(NumberFormatException e){
-                arre[4][8] = 0;
+                if(!cinco_nueve.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[4][8] = 0;
+                }
             }
 
             //Sexto cuadro
@@ -1073,55 +1333,109 @@ public class Interfaz extends javax.swing.JFrame {
             try{
                 arre[5][0] = Integer.parseInt(seis_uno.getText());
                 }catch(NumberFormatException e){
-                arre[5][0] = 0;
+                if(!seis_uno.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[5][0] = 0;
+                }
             }
 
             try{
                 arre[5][1] = Integer.parseInt(seis_dos.getText());
                 }catch(NumberFormatException e){
-                arre[5][1] = 0;
+                if(!seis_dos.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[5][1] = 0;
+                }
             }
 
             try{
                 arre[5][2] = Integer.parseInt(seis_tres.getText());        
                 }catch(NumberFormatException e){
-                arre[5][2] = 0;
+                if(!seis_tres.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[5][2] = 0;
+                }
             }
 
             try{
                 arre[5][3] = Integer.parseInt(seis_cuatro.getText());
             }catch(NumberFormatException e){
-                arre[5][3] = 0;
+                if(!seis_cuatro.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[5][3] = 0;
+                }
             }
 
             try{
                 arre[5][4] = Integer.parseInt(seis_cinco.getText());
                 }catch(NumberFormatException e){
-                arre[5][4] = 0;
+                if(!seis_cinco.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[5][4] = 0;
+                }
             }
 
             try{
                 arre[5][5] = Integer.parseInt(seis_seis.getText());
             }catch(NumberFormatException e){
-                arre[5][5] = 0;
+                if(!seis_seis.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[5][5] = 0;
+                }
             }
 
             try{
                 arre[5][6] = Integer.parseInt(seis_siete.getText());
             }catch(NumberFormatException e){
-                arre[5][6] = 0;
+                if(!seis_siete.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[5][6] = 0;
+                }
             }
 
             try{
                 arre[5][7] = Integer.parseInt(seis_ocho.getText());
             }catch(NumberFormatException e){
-                arre[5][7] = 0;
+                if(!seis_ocho.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[5][7] = 0;
+                }
             }
 
             try{
                 arre[5][8] = Integer.parseInt(seis_nueve.getText()); 
                 }catch(NumberFormatException e){
-                arre[5][8] = 0;
+                if(!seis_nueve.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                } else {
+                    arre[5][8] = 0;
+                }
             }
 
 
@@ -1131,55 +1445,109 @@ public class Interfaz extends javax.swing.JFrame {
             try{
                 arre[6][0] = Integer.parseInt(siete_uno.getText());
             }catch(NumberFormatException e){
-                arre[6][0] = 0;
+                if(!siete_uno.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[6][0] = 0;
+                }
             }
 
             try{
                 arre[6][1] = Integer.parseInt(siete_dos.getText());
             }catch(NumberFormatException e){
-                arre[6][1] = 0;
+                if(!siete_dos.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[6][1] = 0;
+                }
             }
 
             try{
                 arre[6][2] = Integer.parseInt(siete_tres.getText());        
             }catch(NumberFormatException e){
-                arre[6][2] = 0;
+                if(!siete_tres.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[6][2] = 0;
+                }
             }
 
             try{
                 arre[6][3] = Integer.parseInt(siete_cuatro.getText());
             }catch(NumberFormatException e){
-                arre[6][3] = 0;
+                if(!siete_cuatro.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[6][3] = 0;
+                }
             }
 
             try{
                 arre[6][4] = Integer.parseInt(siete_cinco.getText());
             }catch(NumberFormatException e){
-                arre[6][4] = 0;
+                if(!siete_cinco.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[6][4] = 0;
+                }
             }
 
             try{
                 arre[6][5] = Integer.parseInt(siete_seis.getText());
             }catch(NumberFormatException e){
-                arre[6][5] = 0;
+                if(!siete_seis.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[6][5] = 0;
+                }
             }
 
             try{
                 arre[6][6] = Integer.parseInt(siete_siete.getText());
             }catch(NumberFormatException e){
-                arre[6][6] = 0;
+                if(!siete_siete.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[6][6] = 0;
+                }
             }
 
             try{
                 arre[6][7] = Integer.parseInt(siete_ocho.getText());
             }catch(NumberFormatException e){
-                arre[6][7] = 0;
+                if(!siete_ocho.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[6][7] = 0;
+                }
             }
 
             try{
                 arre[6][8] = Integer.parseInt(siete_nueve.getText());
             }catch(NumberFormatException e){
-                arre[6][8] = 0;
+                if(!siete_nueve.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[6][8] = 0;
+                }
             }
 
 
@@ -1188,55 +1556,109 @@ public class Interfaz extends javax.swing.JFrame {
             try{
                 arre[7][0] = Integer.parseInt(ocho_uno.getText());
                 }catch(NumberFormatException e){
-                arre[7][0] = 0;
+                if(!ocho_uno.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[7][0] = 0;
+                }
             }
 
             try{
                 arre[7][1] = Integer.parseInt(ocho_dos.getText());
             }catch(NumberFormatException e){
-                arre[7][1] = 0;
+                if(!ocho_dos.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[7][1] = 0;
+                }
             }
 
             try{
                 arre[7][2] = Integer.parseInt(ocho_tres.getText());        
             }catch(NumberFormatException e){
-                arre[7][2] = 0;
+                if(!ocho_tres.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[7][2] = 0;
+                }
             }
 
             try{
                 arre[7][3] = Integer.parseInt(ocho_cuatro.getText());
             }catch(NumberFormatException e){
-                arre[7][3] = 0;
+                if(!ocho_cuatro.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[7][3] = 0;
+                }
             }
 
             try{
                 arre[7][4] = Integer.parseInt(ocho_cinco.getText());
             }catch(NumberFormatException e){
-                arre[7][4] = 0;
+                if(!ocho_cinco.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[7][4] = 0;
+                }
             }
 
             try{
                 arre[7][5] = Integer.parseInt(ocho_seis.getText());
             }catch(NumberFormatException e){
-                arre[7][5] = 0;
+                if(!ocho_seis.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[7][5] = 0;
+                }
             }
 
             try{
                 arre[7][6] = Integer.parseInt(ocho_siete.getText());
             }catch(NumberFormatException e){
-                arre[7][6] = 0;
+                if(!ocho_siete.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[7][6] = 0;
+                }
             }
 
             try{
                 arre[7][7] = Integer.parseInt(ocho_ocho.getText());
             }catch(NumberFormatException e){
-                arre[7][7] = 0;
+                if(!ocho_ocho.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[7][7] = 0;
+                }
             }
 
             try{
                 arre[7][8] = Integer.parseInt(ocho_nueve.getText()); 
             }catch(NumberFormatException e){
-                arre[7][8] = 0;
+                if(!ocho_nueve.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[7][8] = 0;
+                }
             }
 
             //Noveno cuadro
@@ -1245,55 +1667,109 @@ public class Interfaz extends javax.swing.JFrame {
             try{
                 arre[8][0] = Integer.parseInt(nueve_uno.getText());
             }catch(NumberFormatException e){
-                arre[8][0] = 0;
+                if(!nueve_uno.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[8][0] = 0;
+                }
             }
 
             try{
                 arre[8][1] = Integer.parseInt(nueve_dos.getText());
             }catch(NumberFormatException e){
-                arre[8][1] = 0;
+                if(!nueve_dos.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[8][1] = 0;
+                }
             }
 
             try{
                 arre[8][2] = Integer.parseInt(nueve_tres.getText());        
             }catch(NumberFormatException e){
-                arre[8][2] = 0;
+                if(!nueve_dos.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[8][2] = 0;
+                }
             }
 
             try{
                 arre[8][3] = Integer.parseInt(nueve_cuatro.getText());
             }catch(NumberFormatException e){
-                arre[8][3] = 0;
+                if(!nueve_cuatro.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[8][3] = 0;
+                }
             }
 
             try{
                 arre[8][4] = Integer.parseInt(nueve_cinco.getText());
             }catch(NumberFormatException e){
-                arre[8][4] = 0;
+                if(!nueve_cinco.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[8][4] = 0;
+                }
             }
 
             try{
                 arre[8][5] = Integer.parseInt(nueve_seis.getText());
             }catch(NumberFormatException e){
-                arre[8][5] = 0;
+                if(!nueve_seis.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[8][5] = 0;
+                }
             }
 
             try{
                 arre[8][6] = Integer.parseInt(nueve_siete.getText());
             }catch(NumberFormatException e){
-                arre[8][6] = 0;
+                if(!nueve_siete.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[8][6] = 0;
+                }
             }
 
             try{
                 arre[8][7] = Integer.parseInt(nueve_ocho.getText());
             }catch(NumberFormatException e){
-                arre[8][7] = 0;
+                if(!nueve_ocho.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[8][7] = 0;
+                }
             }
 
             try{
                 arre[8][8] = Integer.parseInt(nueve_nueve.getText()); 
             }catch(NumberFormatException e){
-                arre[8][8] = 0;
+                if(!nueve_nueve.getText().equals("")) {
+
+                    throw new CharacterNotValidException();
+
+                }else {
+                    arre[8][8] = 0;
+                }
             }
 
 
