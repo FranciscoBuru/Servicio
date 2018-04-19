@@ -747,67 +747,39 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
        
         try{
-        
             String aux;
             int arre [][] = new int [9][9];
-
             try{
                 arre[0][0] = Integer.parseInt(uno_uno.getText());
-
-            }
-            catch(NumberFormatException e){
-
-                if(!uno_uno.getText().equals("")) {
-
+            }catch(NumberFormatException e){
+                if(!uno_uno.getText().equals("")) 
                     throw new CharacterNotValidException();
-
-                } else {
+                else 
                     arre[0][0] = 0;
-                }
             }
-
-
             try{
                 arre[0][1] = Integer.parseInt(uno_dos.getText());
-            }
-            catch(NumberFormatException e){
-                if(!uno_dos.getText().equals("")) {
-
+            }catch(NumberFormatException e){
+                if(!uno_dos.getText().equals(""))
                     throw new CharacterNotValidException();
-
-                } else {
+                else 
                     arre[0][1] = 0;
-                }
             }
-
-            
-            
-            
             try{
                 arre[0][2] = Integer.parseInt(uno_tres.getText());        
-            }
-            catch(NumberFormatException e){
-                if(!uno_tres.getText().equals("")) {
-
+            }catch(NumberFormatException e){
+                if(!uno_tres.getText().equals(""))
                     throw new CharacterNotValidException();
-
-                } else {
+                else
                     arre[0][2] = 0;
-                }
             }
-
-
             try{
                 arre[0][3] = Integer.parseInt(uno_cuatro.getText());
-            }
-            catch(NumberFormatException e){
-                if(!uno_cuatro.getText().equals("")) {
-
+            }catch(NumberFormatException e){
+                if(!uno_cuatro.getText().equals(""))
                     throw new CharacterNotValidException();
-
-                } else {
+                else
                     arre[0][3] = 0;
-                }
             }
 
 
