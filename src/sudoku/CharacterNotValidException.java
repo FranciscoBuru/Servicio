@@ -11,12 +11,8 @@ package sudoku;
  */
 public class CharacterNotValidException extends NullPointerException {
     
-    
-   public CharacterNotValidException(){
-       
+    public CharacterNotValidException(){
        super();
-       
-   } 
-    
-    
+   }
+
 }

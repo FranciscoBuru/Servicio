@@ -125,10 +125,6 @@ public class Sudoku {
         return res;
     }
     
-    
-    
-    
-    
     public  void imprimeSudoku(){
         String res = "";
         for(int i =0; i<9; i++){
