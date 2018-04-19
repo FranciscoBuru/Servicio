@@ -1770,24 +1770,11 @@ public class Interfaz extends javax.swing.JFrame {
                     arre[8][8] = 0;
                 }
             }
-
-
-
             Sudoku s1 = new Sudoku(arre);
-
-
-
             int arre2[][] = new int [9][9];
-
             if(s1.revisionInicial()){
-
-
-
                 if(s1.resuelve()){
-
                     arre2 = s1.regresaSudoku();
-
-
                     uno_uno.setText(arre2[0][0]+"");
                     uno_dos.setText(arre2[0][1]+"");
                     uno_tres.setText(arre2[0][2]+"");
@@ -1797,7 +1784,6 @@ public class Interfaz extends javax.swing.JFrame {
                     uno_siete.setText(arre2[0][6]+"");
                     uno_ocho.setText(arre2[0][7]+"");
                     uno_nueve.setText(arre2[0][8]+"");
-
                     dos_uno.setText(arre2[1][0]+"");
                     dos_dos.setText(arre2[1][1]+"");
                     dos_tres.setText(arre2[1][2]+"");
@@ -1807,7 +1793,6 @@ public class Interfaz extends javax.swing.JFrame {
                     dos_siete.setText(arre2[1][6]+"");
                     dos_ocho.setText(arre2[1][7]+"");
                     dos_nueve.setText(arre2[1][8]+"");
-
                     tres_uno.setText(arre2[2][0]+"");
                     tres_dos.setText(arre2[2][1]+"");
                     tres_tres.setText(arre2[2][2]+"");
@@ -1817,9 +1802,6 @@ public class Interfaz extends javax.swing.JFrame {
                     tres_siete.setText(arre2[2][6]+"");
                     tres_ocho.setText(arre2[2][7]+"");
                     tres_nueve.setText(arre2[2][8]+"");
-
-                    //----------------------------------------------
-
                     cuatro_uno.setText(arre2[3][0]+"");
                     cuatro_dos.setText(arre2[3][1]+"");
                     cuatro_tres.setText(arre2[3][2]+"");
@@ -1829,7 +1811,6 @@ public class Interfaz extends javax.swing.JFrame {
                     cuatro_siete.setText(arre2[3][6]+"");
                     cuatro_ocho.setText(arre2[3][7]+"");
                     cuatro_nueve.setText(arre2[3][8]+"");
-
                     cinco_uno.setText(arre2[4][0]+"");
                     cinco_dos.setText(arre2[4][1]+"");
                     cinco_tres.setText(arre2[4][2]+"");
@@ -1839,7 +1820,6 @@ public class Interfaz extends javax.swing.JFrame {
                     cinco_siete.setText(arre2[4][6]+"");
                     cinco_ocho.setText(arre2[4][7]+"");
                     cinco_nueve.setText(arre2[4][8]+"");
-
                     seis_uno.setText(arre2[5][0]+"");
                     seis_dos.setText(arre2[5][1]+"");
                     seis_tres.setText(arre2[5][2]+"");
@@ -1849,9 +1829,6 @@ public class Interfaz extends javax.swing.JFrame {
                     seis_siete.setText(arre2[5][6]+"");
                     seis_ocho.setText(arre2[5][7]+"");
                     seis_nueve.setText(arre2[5][8]+"");
-
-                    //-------------------------------------
-
                     siete_uno.setText(arre2[6][0]+"");
                     siete_dos.setText(arre2[6][1]+"");
                     siete_tres.setText(arre2[6][2]+"");
@@ -1861,7 +1838,6 @@ public class Interfaz extends javax.swing.JFrame {
                     siete_siete.setText(arre2[6][6]+"");
                     siete_ocho.setText(arre2[6][7]+"");
                     siete_nueve.setText(arre2[6][8]+"");
-
                     ocho_uno.setText(arre2[7][0]+"");
                     ocho_dos.setText(arre2[7][1]+"");
                     ocho_tres.setText(arre2[7][2]+"");
@@ -1871,7 +1847,6 @@ public class Interfaz extends javax.swing.JFrame {
                     ocho_siete.setText(arre2[7][6]+"");
                     ocho_ocho.setText(arre2[7][7]+"");
                     ocho_nueve.setText(arre2[7][8]+"");
-
                     nueve_uno.setText(arre2[8][0]+"");
                     nueve_dos.setText(arre2[8][1]+"");
                     nueve_tres.setText(arre2[8][2]+"");
@@ -1881,18 +1856,14 @@ public class Interfaz extends javax.swing.JFrame {
                     nueve_siete.setText(arre2[8][6]+"");
                     nueve_ocho.setText(arre2[8][7]+"");
                     nueve_nueve.setText(arre2[8][8]+"");
-
                     respuestas.setText("Resuelto!");
-
                 }
                 else
                     respuestas.setText("Error, no tiene solución");
             }
             else
                 respuestas.setText("Error, numeros inválidos");
-
-            }
-        catch(NullPointerException e){
+        }catch(NullPointerException e){
             respuestas.setText("Error, símbolos inválidos");
         }
     }//GEN-LAST:event_resuelveActionPerformed
@@ -1903,8 +1874,7 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
         // TODO add your handling code here:
-        
-        
+
         uno_uno.setText("");
         uno_dos.setText("");
         uno_tres.setText("");
@@ -1914,7 +1884,6 @@ public class Interfaz extends javax.swing.JFrame {
         uno_siete.setText("");
         uno_ocho.setText("");
         uno_nueve.setText("");
-        
         dos_uno.setText("");
         dos_dos.setText("");
         dos_tres.setText("");
@@ -1924,7 +1893,6 @@ public class Interfaz extends javax.swing.JFrame {
         dos_siete.setText("");
         dos_ocho.setText("");
         dos_nueve.setText("");
-        
         tres_uno.setText("");
         tres_dos.setText("");
         tres_tres.setText("");
@@ -1934,9 +1902,6 @@ public class Interfaz extends javax.swing.JFrame {
         tres_siete.setText("");
         tres_ocho.setText("");
         tres_nueve.setText("");
-        
-        //----------------------------------------------
-        
         cuatro_uno.setText("");
         cuatro_dos.setText("");
         cuatro_tres.setText("");
@@ -1946,7 +1911,6 @@ public class Interfaz extends javax.swing.JFrame {
         cuatro_siete.setText("");
         cuatro_ocho.setText("");
         cuatro_nueve.setText("");
-        
         cinco_uno.setText("");
         cinco_dos.setText("");
         cinco_tres.setText("");
@@ -1956,7 +1920,6 @@ public class Interfaz extends javax.swing.JFrame {
         cinco_siete.setText("");
         cinco_ocho.setText("");
         cinco_nueve.setText("");
-        
         seis_uno.setText("");
         seis_dos.setText("");
         seis_tres.setText("");
@@ -1966,9 +1929,6 @@ public class Interfaz extends javax.swing.JFrame {
         seis_siete.setText("");
         seis_ocho.setText("");
         seis_nueve.setText("");
-        
-        //-------------------------------------
-        
         siete_uno.setText("");
         siete_dos.setText("");
         siete_tres.setText("");
@@ -1978,7 +1938,6 @@ public class Interfaz extends javax.swing.JFrame {
         siete_siete.setText("");
         siete_ocho.setText("");
         siete_nueve.setText("");
-        
         ocho_uno.setText("");
         ocho_dos.setText("");
         ocho_tres.setText("");
@@ -1988,7 +1947,6 @@ public class Interfaz extends javax.swing.JFrame {
         ocho_siete.setText("");
         ocho_ocho.setText("");
         ocho_nueve.setText("");
-        
         nueve_uno.setText("");
         nueve_dos.setText("");
         nueve_tres.setText("");
@@ -1997,10 +1955,7 @@ public class Interfaz extends javax.swing.JFrame {
         nueve_seis.setText("");
         nueve_siete.setText("");
         nueve_ocho.setText("");
-        nueve_nueve.setText("");   
-        
-        
-        
+        nueve_nueve.setText("");
     }//GEN-LAST:event_limpiarActionPerformed
 
     /**
