@@ -10,7 +10,7 @@ import Auxiliares.ConjuntoA;
 /**
  * Clase con los métodos necesarios para verificar la validéz y resolver
  * un sudoku. 
- * @author FARAMBURA
+ * @author Francisco Aramburu
  */
 public class Sudoku {
     

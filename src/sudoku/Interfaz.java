@@ -7,7 +7,7 @@ package sudoku;
 
 /**
  *
- * @author FARAMBURA
+ * @author Francsico Aramburu
  */
 public class Interfaz extends javax.swing.JFrame {
 

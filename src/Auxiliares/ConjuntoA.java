@@ -10,7 +10,7 @@ import java.util.Iterator;
 /**
  * Clase ConjuntoA con los métodos necesarios para ser implementada en la clase 
  * sudoku 
- * @author FARAMBURA
+ * @author Francisco Aramburu
  * @param <T>
  */
 public class ConjuntoA<T> implements ConjuntoADT<T>{

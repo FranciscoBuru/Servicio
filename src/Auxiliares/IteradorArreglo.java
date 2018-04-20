@@ -10,7 +10,7 @@ import java.util.NoSuchElementException;
 
 /**
  * Clase pública que crea un ioterador
- * @author FARAMBURA
+ * @author Francisco Aramburu
  */
 
 public class IteradorArreglo<T> implements Iterator<T>{
