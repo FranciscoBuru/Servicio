@@ -1432,9 +1432,9 @@ public class Interfaz extends javax.swing.JFrame {
              * de que no tenga solución se envía un mensaje al usuario.
              */
             Sudoku s1 = new Sudoku(arre);
-            int arre2[][] = new int [9][9];
             if(s1.revisionInicial()){
                 if(s1.resuelve()){
+                    int arre2[][];
                     arre2 = s1.regresaSudoku();
                     uno_uno.setText(arre2[0][0]+"");
                     uno_dos.setText(arre2[0][1]+"");
