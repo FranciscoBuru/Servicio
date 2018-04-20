@@ -5,6 +5,8 @@
  */
 package sudoku;
 
+import Auxiliares.ConjuntoA;
+
 /**
  *
  * @author FARAMBURA
@@ -12,13 +14,36 @@ package sudoku;
 public class Sudoku {
     
     int sudoku[][];
+    ConjuntoA<Integer> conj;
     
     public Sudoku() {
         sudoku= new int [9][9];
+        conj = new ConjuntoA();
+        conj.add(0);
+        conj.add(1);
+        conj.add(2);
+        conj.add(3);
+        conj.add(4);
+        conj.add(5);
+        conj.add(6);
+        conj.add(7);
+        conj.add(8);
+        conj.add(9);
     }
     
     public Sudoku(int[][] sudoku) {
         this.sudoku = sudoku;
+        conj = new ConjuntoA();
+        conj.add(0);
+        conj.add(1);
+        conj.add(2);
+        conj.add(3);
+        conj.add(4);
+        conj.add(5);
+        conj.add(6);
+        conj.add(7);
+        conj.add(8);
+        conj.add(9);
     }
     
     private boolean resCol(int col, int num){
@@ -117,7 +142,7 @@ public class Sudoku {
         boolean res = true;
         for(int f = 0; f<9; f++){
             for(int c = 0; c<9 ; c++){
-                if(sudoku[f][c]<0 || sudoku[f][c]>10){
+                if(!conj.contains(sudoku[f][c])&& res){
                     res = false;
                 }
             }
