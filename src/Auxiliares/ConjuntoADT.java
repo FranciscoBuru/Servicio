@@ -10,7 +10,7 @@ package Auxiliares;
 import java.util.Iterator;
 
 /**
- *
+ *Interfáz de tipo ConjuntoADT<T>. Usa Iterable<T>.
  * @author Francisco Aramburu
  * @param <T>
  */

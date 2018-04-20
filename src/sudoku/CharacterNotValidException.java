@@ -6,7 +6,7 @@
 package sudoku;
 
 /**
- *
+ * Excepción creada para la interfáz del sudoku. 
  * @author Francisco Aramburu
  */
 public class CharacterNotValidException extends NullPointerException {

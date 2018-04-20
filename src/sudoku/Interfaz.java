@@ -1,4 +1,4 @@
-/*
+/**
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -745,7 +745,20 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void resuelveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resuelveActionPerformed
         // TODO add your handling code here:
-       
+       /**
+        * Escuchador del botón "Resuelve". Primero toma los elementos que se
+        * encuentran en las casillas del sudoku. si son números los agrega a
+        * un arreglo de 9x9, si no es un número vreifica que el cadro esté 
+        * vacío. En caso de que el cuadro no esté vacio avienta un 
+        * CharacterNotValidException() y le hace saber al usuario que hay un 
+        * símbolo no numérico en la matríz.
+        * Este proceso se hace para cada uno de los 81 textfields en la interfáz. 
+        * Los text fields tienen nombres intuitivos que dan la ubicación real
+        * de un número en el sudoku. uno_dos es el cuadro en la fila uno y la 
+        * columna dos. está posicion se inserta en la posición de la matríz
+        * [fila-1][columna-1] por la forma en la que fuincionan los arreglos en 
+        * general.
+        */
         try{
             String aux;
             int arre [][] = new int [9][9];
@@ -1410,6 +1423,14 @@ public class Interfaz extends javax.swing.JFrame {
                 else 
                     arre[8][8] = 0;
             }
+            /**
+             * Se crea un elemento de clase sudoku con la matríz sacada de la
+             * interfáz. Primero se revisa si es un sudoku válido con
+             * revisiónInicial() y si lo es se intenta resolver. En caso de no 
+             * ser un sudoku válido impirime un mensaje al usuario. 
+             * Si el sudoku tiene solución se imprime en la matríz, en caso
+             * de que no tenga solución se envía un mensaje al usuario.
+             */
             Sudoku s1 = new Sudoku(arre);
             int arre2[][] = new int [9][9];
             if(s1.revisionInicial()){
@@ -1514,7 +1535,10 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
         // TODO add your handling code here:
-
+        /**
+         * Ecuchador del botón "Limpiar" que pone todos los TextFields en 
+         * blanco.
+         */
         uno_uno.setText("");
         uno_dos.setText("");
         uno_tres.setText("");

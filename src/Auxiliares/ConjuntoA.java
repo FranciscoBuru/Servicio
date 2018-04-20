@@ -8,7 +8,8 @@ package Auxiliares;
 import java.util.Iterator;
 
 /**
- *
+ * Clase ConjuntoA con los métodos necesarios para ser implementada en la clase 
+ * sudoku 
  * @author FARAMBURA
  * @param <T>
  */
@@ -16,22 +17,36 @@ public class ConjuntoA<T> implements ConjuntoADT<T>{
     private T[] conjunto;
     private int cardinalidad; 
     private final int MAXIMO = 50;
-    
+    /**
+     * Constructor por omisión
+     */
     public ConjuntoA(){
         conjunto = (T[])new Object[MAXIMO];
         cardinalidad = 0;
     }
-    
+    /**
+     * Método booleano que regresa true si el conjunto está vacío. 
+     * @return 
+     */
     @Override
     public boolean isEmpty(){
         return cardinalidad == 0;
     }
-    
+    /**
+     * Método que contruye un iterados de la clase Iterator y lo regresa.
+     * @return 
+     */
     @Override
     public Iterator<T> iterator(){
         return new IteradorArreglo(conjunto, cardinalidad);
     }
-    
+    /**
+     * Método booleanp que recibe un parámetro de tipo T y verifica se este se
+     * encuentra, o no, en el conjunto. Regresa true si el parámetro se 
+     * encuentra en el conjunto.
+     * @param obj
+     * @return Boolan 
+     */
     @Override
     public boolean contains(T obj){
         boolean contiene;
@@ -43,7 +58,9 @@ public class ConjuntoA<T> implements ConjuntoADT<T>{
             contiene = iterador.next().equals(obj);
         return contiene;
     } 
-    
+    /**
+     * Método que extiende el arreglo en el que se encuentra el conjunto.
+     */
     private void extiendeArreglo(){
         T[] nuevoConjunto;
         int i, longitud;
@@ -54,7 +71,13 @@ public class ConjuntoA<T> implements ConjuntoADT<T>{
             nuevoConjunto[i] = conjunto[i];
         conjunto = nuevoConjunto;
     }
-    
+    /***
+     * Método booleano que agrega un elemento al conjunto. Regresa true si el 
+     * elemento se pudo agregar (Los elementos que ya estan en el conjunto no
+     * se vuelven a agregar por definición de conjunto.)
+     * @param obj
+     * @return 
+     */
     @Override
     public boolean add(T obj){
         boolean agrega;

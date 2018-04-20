@@ -9,19 +9,19 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- *
+ * Clase pública que crea un ioterador
  * @author FARAMBURA
  */
 
 public class IteradorArreglo<T> implements Iterator<T>{
     private T[] coleccion;
-    private int elementosGuardados; //en la coleccion
+    private int elementosGuardados; 
     private int actual;
     
     public IteradorArreglo(T[] coleccion, int elementosGuardados){
         this.coleccion = coleccion;
         this.elementosGuardados = elementosGuardados;
-        actual = 0; //el iterador se va a colocar en el elemento 0 de la coleccion
+        actual = 0; 
     }
     
     public boolean hasNext(){

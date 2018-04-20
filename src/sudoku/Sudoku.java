@@ -8,14 +8,17 @@ package sudoku;
 import Auxiliares.ConjuntoA;
 
 /**
- *
+ * Clase con los métodos necesarios para verificar la validéz y resolver
+ * un sudoku. 
  * @author FARAMBURA
  */
 public class Sudoku {
     
     int sudoku[][];
     ConjuntoA<Integer> conj;
-    
+    /**
+     * Constructor por omisión.
+     */
     public Sudoku() {
         sudoku= new int [9][9];
         conj = new ConjuntoA();
@@ -30,7 +33,10 @@ public class Sudoku {
         conj.add(8);
         conj.add(9);
     }
-    
+    /**
+     * Constructor que recibe un sudoku ya contruido, matríz de 9x9.
+     * @param sudoku 
+     */
     public Sudoku(int[][] sudoku) {
         this.sudoku = sudoku;
         conj = new ConjuntoA();
@@ -45,7 +51,14 @@ public class Sudoku {
         conj.add(8);
         conj.add(9);
     }
-    
+    /**
+     * Método booleano que revisa si un número se encuentra, o no, en una 
+     * columna de la matríz.Regresa ture si el número no esta en la columna.
+     * Recive la columna(col) y el número (num) a verificar.
+     * @param col
+     * @param num
+     * @return boolean
+     */
     private boolean resCol(int col, int num){
         boolean res = true;
         for(int i = 0; i<9; i++){
@@ -55,7 +68,14 @@ public class Sudoku {
         }
         return res;
     }
-    
+    /**
+     * Método booleano que verifica si un numero se encuentra, o no, en una fila
+     * de la matríz.Regresa true si el número no está en la fila. 
+     * Recive la fila(fil) y el número (num) a veríficar
+     * @param fil
+     * @param num
+     * @return boolean 
+     */
     private boolean resFila(int fil, int num){
         boolean res = true;
         for(int i = 0; i<9; i++){
@@ -64,7 +84,16 @@ public class Sudoku {
         }
         return res;
     }
-     
+    /**
+     * Método booleano que verifica si un numero se encuentra, o no, en un 
+     * cuadro de 3x3 dentro de la matríz. Recive la fila y la columna de
+     * el primer elemento. Regresa true si el número no está en el cuadro. 
+     * del caudro.
+     * @param fila
+     * @param col
+     * @param num
+     * @return Boolean
+     */
     private  boolean cuadro(int fila, int col, int num){
         boolean res = true;
         for(int i = fila; i<fila+3; i++){
@@ -75,7 +104,16 @@ public class Sudoku {
         }
         return res;
     }
-    
+    /**
+     * Método booleano que valida, usando los métodos rescol(int,int), 
+     * resfil(int,int) y cuadro(int,int,int), si un número se puede colocar 
+     * en la posición [fila][columna] en la matríz. Regresa true si el número 
+     * se puede colocar a la posición.
+     * @param fila
+     * @param columna
+     * @param num
+     * @return Boolean 
+     */
     public boolean valida(int fila, int columna, int num){
         boolean res = false;
         int col, fil;
@@ -95,7 +133,10 @@ public class Sudoku {
             res = true;
         return res;
     }
-    
+    /**
+     * Método booleano recursivo que resuelve el sudoku de la clase.
+     * @return Boolean
+     */
     public boolean resuelve(){
         for(int f =0; f<9 ; f++){
             for(int c = 0; c < 9 ; c++){
@@ -115,7 +156,13 @@ public class Sudoku {
         }
         return true;
     }
-    
+    /**
+     * Método Booleano que revisa si la matríz que representa al sudoku en la 
+     * clase es, en si, un sudoku válido. Regresa true si es un sudoku.
+     * (Un sudoku no tiene números repetidos ni menores a 0 y mayores a 9 en 
+     * sus filas columnas y cuadros).
+     * @return Boolean
+     */
     public boolean revisionInicial(){
         boolean res = true;
         int aux;
@@ -137,7 +184,12 @@ public class Sudoku {
             res=false;
         return res;
     }
-    
+    /**
+     * Método boolean que revisa si todos los números dentro de la matríz que 
+     * representa al sudoku son números válidos. (Entre 0 y 9). Regresa true si
+     * todos los números son validos.
+     * @return Boolean
+     */
     public boolean revisionNumerosValidos(){
         boolean res = true;
         for(int f = 0; f<9; f++){
@@ -149,7 +201,9 @@ public class Sudoku {
         }
         return res;
     }
-    
+    /**
+     * Método que imprime el sudoku en el main(psvm).
+     */
     public  void imprimeSudoku(){
         String res = "";
         for(int i =0; i<9; i++){
@@ -165,7 +219,10 @@ public class Sudoku {
         }
         System.out.println(res);
     }
-    
+    /**
+     * Método que regresa el sudoku de la clase.
+     * @return sudoku[][].
+     */
     public int[][] regresaSudoku(){
         return sudoku;
     } 
