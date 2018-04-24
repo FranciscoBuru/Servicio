@@ -584,7 +584,7 @@ public class Interfaz extends javax.swing.JFrame {
                                     .addComponent(uno_nueve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(resuelve, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                    .addComponent(resuelve, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
                     .addComponent(respuestas)
                     .addComponent(limpiar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -1443,14 +1443,9 @@ public class Interfaz extends javax.swing.JFrame {
              * Si el sudoku tiene solución se imprime en la matríz, en caso
              * de que no tenga solución se envía un mensaje al usuario.
              */
-            
-            
-            
-            
-            
             Sudoku s1 = new Sudoku(arre);
             if(s1.revisionInicial()){
-                if(s1.resuelve()){
+                if(s1.resuelv()){
                     int arre2[][];
                     arre2 = s1.regresaSudoku();
                     uno_uno.setText(arre2[0][0]+"");
@@ -1536,10 +1531,10 @@ public class Interfaz extends javax.swing.JFrame {
                     nueve_nueve.setText(arre2[8][8]+"");
                     respuestas.setText("Resuelto!");
                 }
+                else if(s1.indicadorTiempo)
+                    respuestas.setText("Error, tiempo máximo sobrepasdo");
                 else
                     respuestas.setText("Error, no tiene solución");
-                if(s1.indicadorTiempo)
-                    respuestas.setText("Error, tiempo exedido");
             }
             else
                 respuestas.setText("Error, numeros inválidos");

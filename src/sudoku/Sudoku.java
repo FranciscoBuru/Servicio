@@ -12,16 +12,19 @@ import Auxiliares.ConjuntoA;
  * un sudoku. 
  * @author Francisco Aramburu
  */
+
 public class Sudoku {
     
     int sudoku[][];
     ConjuntoA<Integer> conj;
     boolean indicadorTiempo = false;
-    long start = System.currentTimeMillis();
-    long end = start + 5*1000; // 60 seconds * 1000 ms/sec
+    long start;
+    long end;
+    
     /**
      * Constructor por omisión.
      */
+    
     public Sudoku() {
         sudoku= new int [9][9];
         conj = new ConjuntoA();
@@ -36,10 +39,12 @@ public class Sudoku {
         conj.add(8);
         conj.add(9);
     }
+    
     /**
      * Constructor que recibe un sudoku ya construido, matríz de 9x9.
      * @param sudoku 
      */
+    
     public Sudoku(int[][] sudoku) {
         this.sudoku = sudoku;
         conj = new ConjuntoA();
@@ -54,6 +59,7 @@ public class Sudoku {
         conj.add(8);
         conj.add(9);
     }
+    
     /**
      * Método booleano que revisa si un número se encuentra, o no, en una 
      * columna de la matríz. Regresa ture si el número no esta en la columna.
@@ -62,6 +68,7 @@ public class Sudoku {
      * @param num
      * @return boolean
      */
+    
     private boolean resCol(int col, int num){
         boolean res = true;
         int i = 0;
@@ -73,6 +80,7 @@ public class Sudoku {
         }
         return res;
     }
+    
     /**
      * Método booleano que verifica si un numero se encuentra, o no, en una fila
      * de la matríz.Regresa true si el número no está en la fila. 
@@ -81,6 +89,7 @@ public class Sudoku {
      * @param num
      * @return boolean 
      */
+    
     private boolean resFila(int fil, int num){
         boolean res = true;
         int i = 0;
@@ -92,6 +101,7 @@ public class Sudoku {
         }
         return res;
     }
+    
     /**
      * Método booleano que verifica si un numero se encuentra, o no, en un 
      * cuadro de 3x3 dentro de la matríz. Recibe la fila y la columna de
@@ -102,6 +112,7 @@ public class Sudoku {
      * @param num
      * @return Boolean
      */
+    
     private  boolean cuadro(int fila, int col, int num){
         boolean res = true;
         int i = fila;
@@ -118,6 +129,7 @@ public class Sudoku {
         }
         return res;
     }
+    
     /**
      * Método booleano que valida, usando los métodos rescol(int,int), 
      * resfil(int,int) y cuadro(int,int,int), si un número se puede colocar 
@@ -128,6 +140,7 @@ public class Sudoku {
      * @param num
      * @return Boolean 
      */
+    
     public boolean valida(int fila, int columna, int num){
         boolean res = false;
         int col, fil;
@@ -147,11 +160,33 @@ public class Sudoku {
             res = true;
         return res;
     }
+    
+    /**
+     * Método booleano para resolver el sudoku. El método se encarga
+     * inicializar el contador de tiempo que se le otorga al método resuelve()
+     * para intentar resolver el sudoku.
+     * Regresa true si el sudoku tiene solución y false si: 1.- El sudoku no 
+     * tiene solución o 2.- El método sobrepasa tiempo máximo de solución.  
+     * 
+     * @return boolean  
+     */
+    
+    public boolean resuelv(){
+        start = System.currentTimeMillis(); //Toma el tiempo actual del sistema
+        end = start + 5*1000; // 5 seconds * 1000 ms/sec
+        return resuelve();
+    }
+    
     /**
      * Método booleano recursivo que resuelve el sudoku de la clase.
+     * Si después de 5 segundos en el método el programa no ha regresado un 
+     * resultado el método se detendrá y regresa false. También indicara que el
+     * tiempo máximo fue sobrepasado cambiando la variablr indicadorTiempo a 
+     * true.
      * @return Boolean
      */
-    public boolean resuelve(){
+    
+    private boolean resuelve(){
         for(int f =0; f<9 ; f++){
             for(int c = 0; c < 9 ; c++){
                 if(sudoku[f][c] == 0){
@@ -174,7 +209,12 @@ public class Sudoku {
         }
         return true;
     }
-
+    
+    /**
+     * Getter de la variable indicadorTiempo.
+     * @return Boolean 
+     */
+    
     public boolean isIndicadorTiempo() {
         return indicadorTiempo;
     }
@@ -187,6 +227,7 @@ public class Sudoku {
      * sus filas columnas y cuadros).
      * @return Boolean
      */
+    
     public boolean revisionInicial(){
         boolean res = true;
         int aux;
@@ -214,12 +255,14 @@ public class Sudoku {
             res=false;
         return res;
     }
+    
     /**
      * Método boolean que revisa si todos los números dentro de la matríz que 
      * representa al sudoku son números válidos. (Entre 0 y 9). Regresa true si
      * todos los números son validos.
      * @return Boolean
      */
+    
     public boolean revisionNumerosValidos(){
         boolean res = true;
         int f=0;
@@ -236,9 +279,11 @@ public class Sudoku {
         }
         return res;
     }
+    
     /**
      * Método que imprime el sudoku en el main(psvm).
      */
+    
     public  void imprimeSudoku(){
         String res = "";
         for(int i =0; i<9; i++){
@@ -254,10 +299,12 @@ public class Sudoku {
         }
         System.out.println(res);
     }
+    
     /**
      * Método que regresa el sudoku de la clase.
      * @return sudoku[][].
      */
+    
     public int[][] regresaSudoku(){
         return sudoku;
     } 

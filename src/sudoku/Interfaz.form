@@ -250,7 +250,7 @@
               </Group>
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="resuelve" pref="179" max="32767" attributes="0"/>
+                  <Component id="resuelve" pref="207" max="32767" attributes="0"/>
                   <Component id="respuestas" max="32767" attributes="0"/>
                   <Component id="limpiar" max="32767" attributes="0"/>
               </Group>
