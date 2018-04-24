@@ -16,6 +16,9 @@ public class Sudoku {
     
     int sudoku[][];
     ConjuntoA<Integer> conj;
+    boolean indicadorTiempo = false;
+    long start = System.currentTimeMillis();
+    long end = start + 5*1000; // 60 seconds * 1000 ms/sec
     /**
      * Constructor por omisión.
      */
@@ -34,7 +37,7 @@ public class Sudoku {
         conj.add(9);
     }
     /**
-     * Constructor que recibe un sudoku ya contruido, matríz de 9x9.
+     * Constructor que recibe un sudoku ya construido, matríz de 9x9.
      * @param sudoku 
      */
     public Sudoku(int[][] sudoku) {
@@ -53,8 +56,8 @@ public class Sudoku {
     }
     /**
      * Método booleano que revisa si un número se encuentra, o no, en una 
-     * columna de la matríz.Regresa ture si el número no esta en la columna.
-     * Recive la columna(col) y el número (num) a verificar.
+     * columna de la matríz. Regresa ture si el número no esta en la columna.
+     * Recibe la columna(col) y el número (num) a verificar.
      * @param col
      * @param num
      * @return boolean
@@ -73,7 +76,7 @@ public class Sudoku {
     /**
      * Método booleano que verifica si un numero se encuentra, o no, en una fila
      * de la matríz.Regresa true si el número no está en la fila. 
-     * Recive la fila(fil) y el número (num) a veríficar
+     * Recibe la fila(fil) y el número (num) a veríficar
      * @param fil
      * @param num
      * @return boolean 
@@ -91,7 +94,7 @@ public class Sudoku {
     }
     /**
      * Método booleano que verifica si un numero se encuentra, o no, en un 
-     * cuadro de 3x3 dentro de la matríz. Recive la fila y la columna de
+     * cuadro de 3x3 dentro de la matríz. Recibe la fila y la columna de
      * el primer elemento. Regresa true si el número no está en el cuadro. 
      * del caudro.
      * @param fila
@@ -155,6 +158,10 @@ public class Sudoku {
                     for(int n =1; n<10 ; n++){
                         if(valida(f,c,n)){
                             sudoku[f][c] = n;
+                            if(System.currentTimeMillis()>end){
+                                indicadorTiempo = true;
+                                return false;
+                            }
                             if(resuelve())
                                 return true;
                             else
@@ -167,6 +174,12 @@ public class Sudoku {
         }
         return true;
     }
+
+    public boolean isIndicadorTiempo() {
+        return indicadorTiempo;
+    }
+
+    
     /**
      * Método Booleano que revisa si la matríz que representa al sudoku en la 
      * clase es, en si, un sudoku válido. Regresa true si es un sudoku.
