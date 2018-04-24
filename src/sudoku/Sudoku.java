@@ -61,10 +61,12 @@ public class Sudoku {
      */
     private boolean resCol(int col, int num){
         boolean res = true;
-        for(int i = 0; i<9; i++){
-            if(sudoku[i][col] == num){
+        int i = 0;
+        while(i<9 && res){
+            if(sudoku[i][col] == num)
                 res = false;
-            }
+            else
+                i++;
         }
         return res;
     }
@@ -78,9 +80,12 @@ public class Sudoku {
      */
     private boolean resFila(int fil, int num){
         boolean res = true;
-        for(int i = 0; i<9; i++){
+        int i = 0;
+        while(i<9 && res){
             if(sudoku[fil][i] == num)
                 res = false;
+            else
+                i++;
         }
         return res;
     }
@@ -96,11 +101,17 @@ public class Sudoku {
      */
     private  boolean cuadro(int fila, int col, int num){
         boolean res = true;
-        for(int i = fila; i<fila+3; i++){
-            for(int k = col; k < col+3; k++){
+        int i = fila;
+        int k = col;
+        while(i<fila+3 && res){
+            while(k<col+3 && res){
                 if(sudoku[i][k] == num)
                     res = false;
+                else
+                    k++;
             }
+            k=col;
+            i++;
         }
         return res;
     }
@@ -167,8 +178,10 @@ public class Sudoku {
         boolean res = true;
         int aux;
         if(revisionNumerosValidos()){
-            for(int f = 0; f<9; f++){
-                for(int c = 0; c<9 ; c++){
+            int f=0;
+            int c =0;
+            while(f<9 && res){
+                while(c<9 && res){
                     if(sudoku[f][c] != 0){
                         aux = sudoku[f][c];
                         sudoku[f][c] = 0;
@@ -176,8 +189,12 @@ public class Sudoku {
                             res = false;
                         else
                           sudoku[f][c] = aux;
+                        
                     }
+                    c++;
                 }
+                c=0;
+                f++;
             }
         }
         else
@@ -192,12 +209,17 @@ public class Sudoku {
      */
     public boolean revisionNumerosValidos(){
         boolean res = true;
-        for(int f = 0; f<9; f++){
-            for(int c = 0; c<9 ; c++){
-                if(!conj.contains(sudoku[f][c])&& res){
+        int f=0;
+        int c=0;
+        while(f<9 && res){
+            while(c<9 && res){
+                if(!conj.contains(sudoku[f][c])){
                     res = false;
                 }
+                c++;
             }
+            c=0;
+            f++;
         }
         return res;
     }
