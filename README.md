@@ -7,3 +7,5 @@ Se creó una clase que verifica la validez de sudokus y en el caso de tener solu
 El programa corre durante un máximo 5 segundos, si en ese tiempo no ha encontrado una solución se detiene y avisa al usuario. 
 
 Se agregó una interfaz que permite al usuario interactuar con el programa de manera facil, intuitiva y segura.
+
+Proyecto elaborado para la clase Estructuras de Datos en el semestre de Primavera 2018.
