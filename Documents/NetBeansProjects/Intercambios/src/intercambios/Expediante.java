@@ -2,7 +2,7 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+   */
 package intercambios;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -23,10 +23,12 @@ import java.util.logging.Logger;
  */
 public class Expediante {
     int cu;
+    
     LocalDate creaExp;
     LocalDate primerEnvioSE;
     LocalDate correoAlReciv;
     LocalDate copiaEnvASSySE;
+    LocalDate solDeCRNs;
     LocalDate lleganExpYCrn;
     LocalDate crnGenerado;
     LocalDate envioCrnSE;
@@ -46,6 +48,7 @@ public class Expediante {
         this.primerEnvioSE = control;
         this.correoAlReciv = control;
         this.copiaEnvASSySE = control;
+        this.solDeCRNs = control;
         this.lleganExpYCrn = control;
         this.crnGenerado = control;
         this.envioCrnSE = control;
@@ -55,12 +58,13 @@ public class Expediante {
         this.entregaDE = control;
     }
     //Constructor para lectura de archivo
-    public Expediante(int cu, LocalDate creaExp, LocalDate primerEnvioSE, LocalDate correoAlReciv, LocalDate copiaEnvASSySE, LocalDate lleganExpYCrn, LocalDate crnGenerado, LocalDate envioCrnSE, LocalDate actasGeneradas, LocalDate envioDepAcad, LocalDate regresoDepAcad, LocalDate entregaDE) {
+    public Expediante(int cu, LocalDate creaExp, LocalDate primerEnvioSE, LocalDate correoAlReciv, LocalDate copiaEnvASSySE,LocalDate solDeCRNs, LocalDate lleganExpYCrn, LocalDate crnGenerado, LocalDate envioCrnSE, LocalDate actasGeneradas, LocalDate envioDepAcad, LocalDate regresoDepAcad, LocalDate entregaDE) {
         this.cu = cu;
         this.creaExp = creaExp;
         this.primerEnvioSE = primerEnvioSE;
         this.correoAlReciv = correoAlReciv;
         this.copiaEnvASSySE = copiaEnvASSySE;
+        this.solDeCRNs = solDeCRNs;
         this.lleganExpYCrn = lleganExpYCrn;
         this.crnGenerado = crnGenerado;
         this.envioCrnSE = envioCrnSE;
@@ -88,6 +92,10 @@ public class Expediante {
     
     public LocalDate getCopiaEnvASSySE() {
         return copiaEnvASSySE;
+    }
+    
+    public LocalDate getSolDeCRNs(){
+        return solDeCRNs;
     }
 
     public LocalDate getLleganExpYCrn() {
@@ -129,6 +137,10 @@ public class Expediante {
     public void setCopiaEnvASSySE(LocalDate copiaEnvASSySE) {
         this.copiaEnvASSySE = copiaEnvASSySE;
     }
+    
+    public void setSolDeCRNs(LocalDate solDeCRNs){
+        this.solDeCRNs = solDeCRNs;
+    }
 
     public void setLleganExpYCrn(LocalDate lleganExpYCrn) {
         this.lleganExpYCrn = lleganExpYCrn;
@@ -163,6 +175,7 @@ public class Expediante {
         boolean primerEnvioSEB;
         boolean correoAlRecivB;
         boolean copiaEnvASSySEB;
+        boolean solDeCRNsB;
         boolean lleganExpYCrnB;
         boolean crnGeneradoB;
         boolean envioCrnSEB;
@@ -174,6 +187,7 @@ public class Expediante {
         String ex2;
         String ex3;
         String ex4;
+        String ex17;
         String ex5;
         String ex6;
         String ex7;
@@ -197,6 +211,13 @@ public class Expediante {
             ex20 = "   "+ correoAlReciv;
         }else{
             ex20 = " ";
+        }
+        
+        solDeCRNsB = !solDeCRNs.equals(control);
+        if(solDeCRNsB){
+            ex17 = "   "+ solDeCRNs;
+        }else{
+            ex17 = " ";
         }
         lleganExpYCrnB = !lleganExpYCrn.equals(control);
         if(lleganExpYCrnB){
@@ -240,7 +261,7 @@ public class Expediante {
         }else{
             ex9 = " ";
         }
-        return "Expediante con CU: " + cu + "\n\nFecha de Creación: " + creaExp + "\n\nPrimer envio a SE:   "  + ex1 + "\n\nCorreo Recivido:   "  + ex2 + "\n\nCopia enviada a SS y SE: "  + ex20 + "\n\nLlegada de Exp. y CRN's:   "  + ex3 + "\n\nCRN's Generados:   " + ex4 + "\n\nCRN's enviados a SE:   " + ex5 + "\n\nActas Generadss:   "  +ex6+ "\n\nEnviado al Dep. Acad:   " +ex7 + "\n\nRegresa del Dep. Acad:   " +ex8 + "\n\nEntrega a DE:   "  + ex9;
+        return "Expediante con CU:               " + cu + "\n\nFecha de Creación:               " + creaExp + "\n\nPrimer envio a SE:              "  + ex1 + "\n\nCorreo Recivido:                  "  + ex2 + "\n\nCopia enviada a SS y SE:   "  + ex20 +"\n\nCRNs Solicitados:               "+ ex17 +"\n\nLlegada de Exp. y CRN's:   "  + ex3 + "\n\nCRN's Generados:              " + ex4 + "\n\nCRN's enviados a SE:        " + ex5 + "\n\nActas Generads:                  "  +ex6+ "\n\nEnviado al Dep. Acad:        " +ex7 + "\n\nRegresa del Dep. Acad:     " +ex8 + "\n\nEntrega a DE:                       "  + ex9;
     }
     
     public boolean revisaPrimerEnvioSE(){
@@ -256,6 +277,12 @@ public class Expediante {
     public boolean revisaCopiaEnvASSySE(){
         LocalDate control = LocalDate.of(2000, Month.JANUARY, 1);
         return !copiaEnvASSySE.equals(control);
+    }
+   
+    
+    public boolean revisaSolDeCRNs(){
+        LocalDate control = LocalDate.of(2000, Month.JANUARY, 1);
+        return !solDeCRNs.equals(control);
     }
     
     public boolean revisaLleganExpYCrn(){

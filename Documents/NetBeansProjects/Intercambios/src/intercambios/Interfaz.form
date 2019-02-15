@@ -44,10 +44,7 @@
                                   <Component id="cons2" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="cons3" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="cons4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="btnConsFechas" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="cons5" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
@@ -61,21 +58,30 @@
                                   <Component id="label4" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+                              <Component id="btnConsFechas" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
+                      <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="act3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="act2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="act1" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="act6" min="-2" max="-2" attributes="0"/>
                                   <Component id="act5" min="-2" max="-2" attributes="0"/>
                                   <Component id="act7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="act3" min="-2" max="-2" attributes="0"/>
                                   <Component id="act4" min="-2" max="-2" attributes="0"/>
-                                  <Component id="act2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="act1" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="act8" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="act9" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="act10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                      <Component id="btnAct" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="act11" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
@@ -91,24 +97,15 @@
                                   <Component id="label6" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-                              <Component id="btnAct" min="-2" max="-2" attributes="0"/>
-                          </Group>
                       </Group>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="label1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="88" pref="317" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="label1" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="btnGuardar" min="-2" pref="354" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnLimpiar" min="-2" pref="76" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
               <Component id="escribe" min="-2" pref="275" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -116,10 +113,10 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="escribe" alignment="0" max="32767" attributes="0"/>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="label1" min="-2" max="-2" attributes="0"/>
@@ -127,7 +124,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="cuNuevo" min="-2" max="-2" attributes="0"/>
                                   <Component id="label2" min="-2" max="-2" attributes="0"/>
@@ -145,8 +142,23 @@
                                   </Group>
                                   <Component id="label5" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="label9" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cons1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cons2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cons3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cons4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cons5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                              <Component id="btnConsFechas" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="label7" min="-2" max="-2" attributes="0"/>
                                   <Component id="cuAct" min="-2" max="-2" attributes="0"/>
@@ -160,11 +172,9 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="act3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
+                              <Component id="act11" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Component id="act4" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="act5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -179,30 +189,16 @@
                               <Component id="act10" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                               <Component id="btnAct" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                              <Component id="label9" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cons1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cons2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cons3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cons4" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnConsFechas" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="btnGuardar" pref="73" max="32767" attributes="0"/>
-                          <Component id="btnLimpiar" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="btnGuardar" alignment="1" min="-2" pref="73" max="-2" attributes="0"/>
+                          <Component id="btnLimpiar" alignment="1" min="-2" pref="73" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="0" pref="18" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -315,6 +311,9 @@
         <Property name="label" type="java.lang.String" value="Consultar"/>
         <Property name="name" type="java.lang.String" value="btnConsFechas" noResource="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnConsFechasActionPerformed"/>
+      </Events>
     </Component>
     <Component class="java.awt.Checkbox" name="act3">
       <Properties>
@@ -374,7 +373,7 @@
     </Component>
     <Component class="java.awt.Checkbox" name="cons4">
       <Properties>
-        <Property name="label" type="java.lang.String" value="Espera Dep. Acad."/>
+        <Property name="label" type="java.lang.String" value="Calificaciones de Intercambio"/>
         <Property name="name" type="java.lang.String" value="cons4" noResource="true"/>
       </Properties>
     </Component>
@@ -430,6 +429,18 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="java.awt.Checkbox" name="act11">
+      <Properties>
+        <Property name="label" type="java.lang.String" value="Solicitud de CRNs"/>
+        <Property name="name" type="java.lang.String" value="act3" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.Checkbox" name="cons5">
+      <Properties>
+        <Property name="label" type="java.lang.String" value="Espera Dep. Acad."/>
+        <Property name="name" type="java.lang.String" value="cons4" noResource="true"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

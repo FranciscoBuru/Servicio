@@ -12,10 +12,12 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import static java.lang.Integer.parseInt;
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.time.temporal.ChronoUnit;
 
 /**
  *
@@ -45,9 +47,9 @@ public class Interfaz extends javax.swing.JFrame {
                 writer.print("");
             }
             // Escribe Archivo
-            int n = arre.size();
+            int j = arre.size();
             try (BufferedWriter bw = new BufferedWriter(new FileWriter("Guardados.txt"))) {
-                for(int i = 0 ;i<n;i++){
+                for(int i = 0 ;i<j;i++){
                     bw.write(arre.get(i).getCu() + "");
                     bw.write(" ");
                     bw.write(arre.get(i).getCreaExp() + "");
@@ -56,6 +58,11 @@ public class Interfaz extends javax.swing.JFrame {
                     bw.write(" ");
                     bw.write(arre.get(i).getCorreoAlReciv() + "");
                     bw.write(" ");
+                    
+                    bw.write(arre.get(i).getSolDeCRNs() + "");
+                    bw.write(" ");
+                    
+                    
                     bw.write(arre.get(i).getCopiaEnvASSySE() + "");
                     bw.write(" ");
                     bw.write(arre.get(i).getLleganExpYCrn() + "");
@@ -92,6 +99,9 @@ public class Interfaz extends javax.swing.JFrame {
                     LocalDate primerEnvioSEL = LocalDate.parse(input.next());
                     LocalDate correoAlRecivL = LocalDate.parse(input.next());
                     LocalDate copiaEnvASSySEL = LocalDate.parse(input.next());
+                    
+                    LocalDate solDeCRNsL = LocalDate.parse(input.next());
+                    
                     LocalDate lleganExpYCrnL = LocalDate.parse(input.next());
                     LocalDate crnGeneradoL = LocalDate.parse(input.next());
                     LocalDate envioCrnSEL = LocalDate.parse(input.next());
@@ -99,7 +109,7 @@ public class Interfaz extends javax.swing.JFrame {
                     LocalDate envioDepAcadL = LocalDate.parse(input.next());
                     LocalDate regresoDepAcadL = LocalDate.parse(input.next());
                     LocalDate entregaDEL = LocalDate.parse(input.next());
-                    Expediante nuevo = new Expediante(cuL, creaExpL, primerEnvioSEL, correoAlRecivL, copiaEnvASSySEL, lleganExpYCrnL, crnGeneradoL, envioCrnSEL, actasGeneradasL, envioDepAcadL, regresoDepAcadL, entregaDEL);
+                    Expediante nuevo = new Expediante(cuL, creaExpL, primerEnvioSEL, correoAlRecivL, copiaEnvASSySEL, solDeCRNsL, lleganExpYCrnL, crnGeneradoL, envioCrnSEL, actasGeneradasL, envioDepAcadL, regresoDepAcadL, entregaDEL);
                     arre.add(nuevo);
                 }
             }
@@ -150,6 +160,8 @@ public class Interfaz extends javax.swing.JFrame {
         act9 = new java.awt.Checkbox();
         act10 = new java.awt.Checkbox();
         btnLimpiar = new java.awt.Button();
+        act11 = new java.awt.Checkbox();
+        cons5 = new java.awt.Checkbox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -212,6 +224,11 @@ public class Interfaz extends javax.swing.JFrame {
 
         btnConsFechas.setLabel("Consultar");
         btnConsFechas.setName("btnConsFechas"); // NOI18N
+        btnConsFechas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsFechasActionPerformed(evt);
+            }
+        });
 
         act3.setLabel("Copia enviada a SS y SE");
         act3.setName("act3"); // NOI18N
@@ -240,7 +257,7 @@ public class Interfaz extends javax.swing.JFrame {
         cons3.setLabel("Espera para Insc. de Materia");
         cons3.setName("cons3"); // NOI18N
 
-        cons4.setLabel("Espera Dep. Acad.");
+        cons4.setLabel("Calificaciones de Intercambio");
         cons4.setName("cons4"); // NOI18N
 
         btnGuardar.setBackground(new java.awt.Color(153, 255, 204));
@@ -275,6 +292,12 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
+        act11.setLabel("Solicitud de CRNs");
+        act11.setName("act3"); // NOI18N
+
+        cons5.setLabel("Espera Dep. Acad.");
+        cons5.setName("cons4"); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -298,9 +321,7 @@ public class Interfaz extends javax.swing.JFrame {
                                     .addComponent(cons2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(cons3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(cons4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(btnConsFechas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(41, 41, 41))))
+                                    .addComponent(cons5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(btnConsExp, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -308,21 +329,28 @@ public class Interfaz extends javax.swing.JFrame {
                                         .addComponent(label5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(cuCons, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(label4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(label4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(99, 99, 99)
+                                .addComponent(btnConsFechas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(79, 79, 79)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(act3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(act2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(act1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(act6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(act5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(act7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(act3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(act4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(act2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(act1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(act8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(act9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(act10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(act10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(29, 29, 29)
+                                        .addComponent(btnAct, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(act11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(32, 32, 32))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
@@ -332,26 +360,19 @@ public class Interfaz extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(cuAct, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(btnElige, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(label6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(94, 94, 94)
-                                .addComponent(btnAct, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(88, 317, Short.MAX_VALUE))
+                                    .addComponent(label6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addComponent(escribe, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(escribe, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
@@ -374,7 +395,22 @@ public class Interfaz extends javax.swing.JFrame {
                                         .addComponent(cuCons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(btnConsExp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(label5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(label5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(55, 55, 55)
+                                .addComponent(label9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cons1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cons2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cons3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cons4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cons5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                                .addComponent(btnConsFechas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(label7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -388,9 +424,9 @@ public class Interfaz extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(act3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(act4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(act11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(act4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(act5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -404,25 +440,12 @@ public class Interfaz extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(act10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(8, 8, 8)
-                                .addComponent(btnAct, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(55, 55, 55)
-                                .addComponent(label9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cons1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cons2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cons3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cons4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnConsFechas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
-                            .addComponent(btnLimpiar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(0, 18, Short.MAX_VALUE))
+                                .addComponent(btnAct, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnGuardar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnLimpiar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(15, 15, 15))
         );
 
         pack();
@@ -477,6 +500,7 @@ public class Interfaz extends javax.swing.JFrame {
         act8.setState(false);
         act9.setState(false);
         act10.setState(false);
+        act11.setState(false);
         act1.setEnabled(true);
         act2.setEnabled(true);
         act3.setEnabled(true);
@@ -487,6 +511,7 @@ public class Interfaz extends javax.swing.JFrame {
         act8.setEnabled(true);
         act9.setEnabled(true);
         act10.setEnabled(true);
+        act11.setEnabled(true);
         cons1.setState(false);
         cons2.setState(false);
         cons3.setState(false);
@@ -555,6 +580,8 @@ public class Interfaz extends javax.swing.JFrame {
                     act9.setEnabled(!arre.get(n).revisaRegresoDepAcad());
                     act10.setState(arre.get(n).revisaEntregaDE());
                     act10.setEnabled(!arre.get(n).revisaEntregaDE());
+                    act11.setState(arre.get(n).revisaSolDeCRNs());
+                    act11.setEnabled(!arre.get(n).revisaSolDeCRNs());
                     btnAct.setEnabled(true);
                     escribe.setText("Expediente a actualizar con CU = " + arre.get(n).getCu());
                 }
@@ -611,6 +638,11 @@ public class Interfaz extends javax.swing.JFrame {
             arre.get(n).setEntregaDE(LocalDate.now());
             escribe.setText("Entrega a Dir. Esc. Actualizado\nCU modificada = "+arre.get(n).getCu());
         }
+        
+        if(act11.getState() && act11.isEnabled()){
+            arre.get(n).setSolDeCRNs(LocalDate.now());
+            escribe.setText("Solicitud de CRNs Actualizado\nCU modificada = "+arre.get(n).getCu());
+        }
         btnAct.setEnabled(false);
         act1.setState(false);
         act2.setState(false);
@@ -622,6 +654,7 @@ public class Interfaz extends javax.swing.JFrame {
         act8.setState(false);
         act9.setState(false);
         act10.setState(false);
+        act11.setState(false);
         act1.setEnabled(true);
         act2.setEnabled(true);
         act3.setEnabled(true);
@@ -632,8 +665,52 @@ public class Interfaz extends javax.swing.JFrame {
         act8.setEnabled(true);
         act9.setEnabled(true);
         act10.setEnabled(true);
+        act11.setEnabled(true);
         
     }//GEN-LAST:event_btnActActionPerformed
+
+    private void btnConsFechasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsFechasActionPerformed
+        // TODO add your handling code here:
+        int k=arre.size();
+        int dias;
+        String respuesta = "";
+        LocalDate control = LocalDate.of(2000, Month.JANUARY, 1);
+        LocalDate hoy = LocalDate.now();
+        
+        if (cons1.getState()){
+        }
+        else if (cons2.getState()){
+            for(int m=0; m<k;m++){
+                if(!arre.get(m).getSolDeCRNs().equals(control) && arre.get(m).getLleganExpYCrn().equals(control)){
+                    respuesta = respuesta + "\nExpediente: " + arre.get(m).getCu() + "    Días de espera:  " + ChronoUnit.DAYS.between((LocalDate)arre.get(m).getSolDeCRNs(), LocalDate.now());
+                }
+            }
+        }
+        else if (cons3.getState()){
+            for(int m=0; m<k;m++){
+                if(!arre.get(m).getEnvioCrnSE().equals(control) && arre.get(m).getActasGeneradas().equals(control)){
+                    respuesta = respuesta + "\nExpediente: " + arre.get(m).getCu() + "    Días de espera:  " + ChronoUnit.DAYS.between((LocalDate)arre.get(m).getEnvioCrnSE(), LocalDate.now());
+                }
+            }
+        }
+        else if (cons4.getState()){
+        }
+        else if (cons5.getState()){
+            for(int m=0; m<k;m++){
+                if(!arre.get(m).getEnvioDepAcad().equals(control) && arre.get(m).getRegresoDepAcad().equals(control)){
+                    respuesta = respuesta + "\nExpediente: " + arre.get(m).getCu() + "    Días de espera:  " + ChronoUnit.DAYS.between((LocalDate)arre.get(m).getEnvioDepAcad(), LocalDate.now());
+                }
+            }
+        }
+        if(!respuesta.equals("")){
+            escribe.setText(respuesta);
+        }
+        else{ 
+            escribe.setText("No hay datos");
+        }
+        
+        
+    }//GEN-LAST:event_btnConsFechasActionPerformed
     /**
      * @param args the command line arguments
      */
@@ -669,6 +746,7 @@ public class Interfaz extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Checkbox act1;
     private java.awt.Checkbox act10;
+    private java.awt.Checkbox act11;
     private java.awt.Checkbox act2;
     private java.awt.Checkbox act3;
     private java.awt.Checkbox act4;
@@ -688,6 +766,7 @@ public class Interfaz extends javax.swing.JFrame {
     private java.awt.Checkbox cons2;
     private java.awt.Checkbox cons3;
     private java.awt.Checkbox cons4;
+    private java.awt.Checkbox cons5;
     private java.awt.TextField cuAct;
     private java.awt.TextField cuCons;
     private java.awt.TextField cuNuevo;
