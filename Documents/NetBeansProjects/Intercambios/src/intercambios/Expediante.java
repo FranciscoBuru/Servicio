@@ -4,26 +4,16 @@
  * and open the template in the editor.
    */
 package intercambios;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.time.LocalDate;
 import java.time.Month;
-import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 /**
  *
  * @author Francisco Aramburu 
  */
 public class Expediante {
     int cu;
-    
+    String periodo;
     LocalDate creaExp;
     LocalDate primerEnvioSE;
     LocalDate correoAlReciv;
@@ -33,17 +23,25 @@ public class Expediante {
     LocalDate crnGenerado;
     LocalDate envioCrnSE;
     LocalDate actasGeneradas;
+    
+    LocalDate transcript;
+    
     LocalDate envioDepAcad;
     LocalDate regresoDepAcad;
+    
+    boolean pendPre;
+    
     LocalDate entregaDE;
+    LocalDate auxiliarTranscript;
     
     //Constructor por omisio+n
     public Expediante() {
     }
     //Constructor de un nuevo expediente
-    public Expediante(int cu) {
+    public Expediante(int cu, String periodo) {
         LocalDate control = LocalDate.of(2000, Month.JANUARY, 1);
         this.cu = cu;
+        this.periodo = periodo;
         this.creaExp = LocalDate.now();
         this.primerEnvioSE = control;
         this.correoAlReciv = control;
@@ -53,13 +51,17 @@ public class Expediante {
         this.crnGenerado = control;
         this.envioCrnSE = control;
         this.actasGeneradas = control;
+        this.transcript = control;
         this.envioDepAcad = control;
         this.regresoDepAcad = control;
         this.entregaDE = control;
+        this.auxiliarTranscript = control;
+        this.pendPre = false;
     }
     //Constructor para lectura de archivo
-    public Expediante(int cu, LocalDate creaExp, LocalDate primerEnvioSE, LocalDate correoAlReciv, LocalDate copiaEnvASSySE,LocalDate solDeCRNs, LocalDate lleganExpYCrn, LocalDate crnGenerado, LocalDate envioCrnSE, LocalDate actasGeneradas, LocalDate envioDepAcad, LocalDate regresoDepAcad, LocalDate entregaDE) {
+    public Expediante(int cu, String periodo, LocalDate creaExp, LocalDate primerEnvioSE, LocalDate correoAlReciv, LocalDate copiaEnvASSySE,LocalDate solDeCRNs, LocalDate lleganExpYCrn, LocalDate crnGenerado, LocalDate envioCrnSE, LocalDate actasGeneradas, LocalDate auxiliarTranscript, LocalDate transcript, LocalDate envioDepAcad, LocalDate regresoDepAcad, boolean pendPre, LocalDate entregaDE) {
         this.cu = cu;
+        this.periodo = periodo;
         this.creaExp = creaExp;
         this.primerEnvioSE = primerEnvioSE;
         this.correoAlReciv = correoAlReciv;
@@ -69,13 +71,21 @@ public class Expediante {
         this.crnGenerado = crnGenerado;
         this.envioCrnSE = envioCrnSE;
         this.actasGeneradas = actasGeneradas;
+        this.auxiliarTranscript = auxiliarTranscript;
+        this.transcript = transcript;
         this.envioDepAcad = envioDepAcad;
         this.regresoDepAcad = regresoDepAcad;
+        this.pendPre = pendPre;
         this.entregaDE = entregaDE;
+        
     }
     //getters
     public int getCu() {
         return cu;
+    }
+    
+    public String getPeriodo() {
+        return periodo;
     }
 
     public LocalDate getCreaExp() {
@@ -113,6 +123,14 @@ public class Expediante {
     public LocalDate getActasGeneradas() {
         return actasGeneradas;
     }
+    
+    public LocalDate getAuxiliarTranscript() {
+        return auxiliarTranscript;
+    }
+    
+    public LocalDate getTranscript() {
+        return transcript;
+    }
 
     public LocalDate getEnvioDepAcad() {
         return envioDepAcad;
@@ -125,6 +143,11 @@ public class Expediante {
     public LocalDate getEntregaDE() {
         return entregaDE;
     }
+    public boolean getPendPre() {
+        return pendPre;
+    }
+    
+    
     //setters
     public void setPrimerEnvioSE(LocalDate primerEnvioSE) {
         this.primerEnvioSE = primerEnvioSE;
@@ -157,6 +180,14 @@ public class Expediante {
     public void setActasGeneradas(LocalDate actasGeneradas) {
         this.actasGeneradas = actasGeneradas;
     }
+    
+    public void setAuxiliarTranscript(LocalDate auxiliarTranscript) {
+        this.auxiliarTranscript = auxiliarTranscript;
+    }
+    
+    public void setTranscript(LocalDate transcript) {
+        this.transcript = transcript;
+    }
 
     public void setEnvioDepAcad(LocalDate envioDepAcad) {
         this.envioDepAcad = envioDepAcad;
@@ -165,7 +196,11 @@ public class Expediante {
     public void setRegresoDepAcad(LocalDate regresoDepAcad) {
         this.regresoDepAcad = regresoDepAcad;
     }
-
+    
+    public void setPendPre(boolean pendPre) {
+        this.pendPre = pendPre;
+    }
+    
     public void setEntregaDE(LocalDate entregaDE) {
         this.entregaDE = entregaDE;
     }
@@ -180,6 +215,7 @@ public class Expediante {
         boolean crnGeneradoB;
         boolean envioCrnSEB;
         boolean actasGeneradasB;
+        boolean transcriptB;
         boolean envioDepAcadB;
         boolean regresoDepAcadB;
         boolean entregaDEB;
@@ -194,6 +230,8 @@ public class Expediante {
         String ex8;
         String ex9;
         String ex20;
+        String ex50;
+        String ex70;
         primerEnvioSEB = !primerEnvioSE.equals(control);
         if(primerEnvioSEB){
             ex1 = "   "+ primerEnvioSE;
@@ -243,6 +281,14 @@ public class Expediante {
         }else{
             ex6 = " ";
         }
+        
+        transcriptB = !transcript.equals(control);
+        if(transcriptB){
+            ex50 = "   "+ transcript;
+        }else{
+            ex50 = " ";
+        }
+        
         envioDepAcadB = !envioDepAcad.equals(control);
         if(envioDepAcadB){
             ex7 = "   "+ envioDepAcad;
@@ -255,13 +301,23 @@ public class Expediante {
         }else{
             ex8 = " ";
         }
+        
+        if(pendPre){
+            ex70 = "SI";
+        }
+        else{
+            ex70 = "NO";
+        }
+        
+        
+        
         entregaDEB = !entregaDE.equals(control);
         if(entregaDEB){
             ex9 = "   "+ entregaDE;
         }else{
             ex9 = " ";
         }
-        return "Expediante con CU:               " + cu + "\n\nFecha de Creación:               " + creaExp + "\n\nPrimer envio a SE:              "  + ex1 + "\n\nCorreo Recivido:                  "  + ex2 + "\n\nCopia enviada a SS y SE:   "  + ex20 +"\n\nCRNs Solicitados:               "+ ex17 +"\n\nLlegada de Exp. y CRN's:   "  + ex3 + "\n\nCRN's Generados:              " + ex4 + "\n\nCRN's enviados a SE:        " + ex5 + "\n\nActas Generads:                  "  +ex6+ "\n\nEnviado al Dep. Acad:        " +ex7 + "\n\nRegresa del Dep. Acad:     " +ex8 + "\n\nEntrega a DE:                       "  + ex9;
+        return "Expediante con CU:               " + cu +"\n\nPeriodo:                                   " + periodo + "\n\nFecha de Creación:               " + creaExp + "\n\nPrimer envio a SE:              "  + ex1 + "\n\nCorreo Recivido:                  "  + ex2 + "\n\nCopia enviada a SS y SE:   "  + ex20 +"\n\nCRNs Solicitados:               "+ ex17 +"\n\nLlegada de Exp. y CRN's:   "  + ex3 + "\n\nCRN's Generados:              " + ex4 + "\n\nCRN's enviados a SE:        " + ex5 + "\n\nActas Generads:                  "  +ex6+ "\n\nTranscript:                             " + ex50 + "\n\nEnviado al Dep. Acad:        " +ex7 + "\n\nRegresa del Dep. Acad:     " +ex8 + "\n\nPrerrequisitos pendeientes:   " +ex70+ "\n\nEntrega a DE:                       "  + ex9;
     }
     
     public boolean revisaPrimerEnvioSE(){
@@ -303,6 +359,17 @@ public class Expediante {
     public boolean revisaActasGeneradas(){
         LocalDate control = LocalDate.of(2000, Month.JANUARY, 1);
         return !actasGeneradas.equals(control);
+    }
+    
+    public boolean revisaAuxiliarTranscript(){
+        LocalDate control = LocalDate.of(2000, Month.JANUARY, 1);
+        return !auxiliarTranscript.equals(control);
+    }
+    
+    
+    public boolean revisaTranscript(){
+        LocalDate control = LocalDate.of(2000, Month.JANUARY, 1);
+        return !transcript.equals(control);
     }
     
     public boolean revisaEnvioDepAcad(){
